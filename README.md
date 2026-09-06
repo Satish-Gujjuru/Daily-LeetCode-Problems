@@ -1,79 +1,79 @@
-# 🧠 LeetCode
+# 🧑‍💻 Satish's LeetCode Journey
 
-### Daily LeetCode solutions, automatically tracked.
+<p align="center">
+  <img
+    src="./assets/leetcode-heatmap.svg"
+    alt="LeetCode submission heatmap"
+    width="950"
+  />
+</p>
+
+<p align="center">
+  <b>Daily LeetCode practice, automatically tracked through GitHub.</b>
+  <br>
+  Accepted solutions synced by LeetSync are reflected in this dashboard.
+</p>
 
 ---
+
+## ⚡ Quick Overview
+
+| 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
+|---:|---:|---:|---:|---:|---:|
+| **65** | **55** | **9** | **1** | **15 days** | **15 days** |
+
+---
+
 
 ## 📊 LeetCode Statistics
 
-| 🧩 Problems Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
-|:---:|:---:|:---:|:---:|
-| **65** | **55** | **9** | **1** |
+| Metric | Value |
+|---|---:|
+| 🧩 **Problems Solved** | **65** |
+| 🟢 Easy | 55 / 963 |
+| 🟡 Medium | 9 / 2,111 |
+| 🔴 Hard | 1 / 972 |
+| 🎯 Acceptance Rate | **76.2%** |
+| 🔥 Current Streak | **15 days** |
+| 🏆 Longest Streak | **15 days** |
+| 📅 Active Days | **25** |
+| 📁 Problems in Repository | **2** |
 
-| 📈 Acceptance Rate | 🔥 Current Streak | 🏆 Max Streak | 💻 Submissions |
-|:---:|:---:|:---:|:---:|
-| **61.9%** | **15 Days** | **15 Days** | **105** |
+### Difficulty Progress
 
-> **Last Updated:** `06 Sep 2026, 11:39 UTC`
+| Difficulty | Progress | Completion |
+|---|---|---:|
+| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 5.7% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
+| 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
----
 
-# 📅 Submission Heatmap
 
-![LeetCode Submission Heatmap](./assets/leetcode-heatmap.svg)
+## 🏁 Contest Profile
 
-**🔥 Current Streak:** `15 days`  
-**🏆 Longest Streak:** `15 days`  
-**📅 Active Days:** `25`
+| Rating | Global Rank | Top Percentage | Contests |
+|---:|---:|---:|---:|
+| **1,413** | **684,876** | **78.06%** | **1** |
 
----
 
-# 🎯 Problem Solving Progress
+## 🕐 Recently Added
 
-## Difficulty Breakdown
+| Problem | Difficulty | Date |
+|---|---|---|
+| [75. Sort Colors](./75-sort-colors) | 🟡 Medium | 2026-09-06 |
+| [4285. Smallest Stable Index II](./4285-smallest-stable-index-ii) | 🟡 Medium | 2026-09-06 |
 
-### 🟢 Easy
+## 🧩 Problems Solved
 
-**55 / 963**
+### 🟡 Medium (2)
 
-`█░░░░░░░░░░░░░░░░░░░░░░░`
+| # | Problem | Topics | Solution | Date |
+|---:|---|---|---|---|
+| 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
+| 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
 
-### 🟡 Medium
 
-**9 / 2111**
-
-`░░░░░░░░░░░░░░░░░░░░░░░░`
-
-### 🔴 Hard
-
-**1 / 972**
-
-`░░░░░░░░░░░░░░░░░░░░░░░░`
-
----
-
-# 📚 Problems Solved
-
-## 🟢 Easy
-
-| # | Problem | Topics | Solution |
-|---:|---|---|---|
-
-## 🟡 Medium
-
-| # | Problem | Topics | Solution |
-|---:|---|---|---|
-| 1 | Sort Colors | Array, Two Pointers, Sorting, Quicksort, Bubble Sort | [View](./75-sort-colors) |
-| 2 | Smallest Stable Index II | Array, Prefix Sum | [View](./4285-smallest-stable-index-ii) |
-
-## 🔴 Hard
-
-| # | Problem | Topics | Solution |
-|---:|---|---|---|
-
----
-
-# 🧩 Topics
+## 🧠 Top Topics
 
 | Topic | Problems |
 |---|---:|
@@ -84,39 +84,61 @@
 | Bubble Sort | 1 |
 | Prefix Sum | 1 |
 
----
+## 💻 Languages Used
 
-# 💻 Languages
-
-| Language | Problems |
+| Language | Solutions |
 |---|---:|
 | Java | 2 |
+| Python | 1 |
+
+## 📅 Last 30 Days
+
+| Date | Submissions |
+|---|---:|
+| 2026-08-08 | 1 |
+| 2026-08-09 | 0 |
+| 2026-08-10 | 4 |
+| 2026-08-11 | 3 |
+| 2026-08-12 | 2 |
+| 2026-08-13 | 0 |
+| 2026-08-14 | 0 |
+| 2026-08-15 | 0 |
+| 2026-08-16 | 0 |
+| 2026-08-17 | 0 |
+| 2026-08-18 | 0 |
+| 2026-08-19 | 0 |
+| 2026-08-20 | 0 |
+| 2026-08-21 | 0 |
+| 2026-08-22 | 0 |
+| 2026-08-23 | 1 |
+| 2026-08-24 | 10 |
+| 2026-08-25 | 5 |
+| 2026-08-26 | 4 |
+| 2026-08-27 | 1 |
+| 2026-08-28 | 5 |
+| 2026-08-29 | 5 |
+| 2026-08-30 | 2 |
+| 2026-08-31 | 11 |
+| 2026-09-01 | 3 |
+| 2026-09-02 | 3 |
+| 2026-09-03 | 6 |
+| 2026-09-04 | 2 |
+| 2026-09-05 | 3 |
+| 2026-09-06 | 1 |
 
 ---
 
-# 🗓️ Daily Submission History
+## 🔗 Profiles
 
-| # | Date | Problem | Difficulty | Topics |
-|---:|---|---|:---:|---|
-| 1 | 2026-09-06 | [Smallest Stable Index II](https://github.com/kl2400030372/Daily-LeetCode-Problems/tree/main/4285-smallest-stable-index-ii) | 🟡 Medium | Array, Prefix Sum |
-| 2 | 2026-09-06 | [Sort Colors](https://github.com/kl2400030372/Daily-LeetCode-Problems/tree/main/75-sort-colors) | 🟡 Medium | Array, Two Pointers, Sorting, Quicksort, Bubble Sort |
+- 🟧 [LeetCode](https://leetcode.com/u/kl2400030372/)
+- 🐙 [GitHub](https://github.com/kl2400030372)
 
 ---
 
-# 🧠 DSA Skills
-
-### Data Structures
-
-`Arrays` `Strings` `HashMap` `HashSet` `Linked List` `Stack` `Queue` `Trees` `Graphs` `Heap` `Trie`
-
-### Algorithms & Patterns
-
-`Binary Search` `Two Pointers` `Sliding Window` `Recursion` `Backtracking` `Greedy` `Dynamic Programming` `Sorting`
-
----
-
-### 🚀 One Problem Every Day
-
-**Learn → Solve → Optimize → Commit → Repeat**
-
-<p align='center'><i>Dashboard automatically updated using LeetCode data and GitHub Actions.</i></p>
+<p align="center">
+  <sub>
+    🤖 Automatically updated by GitHub Actions
+    <br>
+    Last update: 06 Sep 2026, 11:52
+  </sub>
+</p>
