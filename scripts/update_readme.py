@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 import requests
 
 
-USERNAME = "Satish-Gujjuru"
+USERNAME = "kl2400030372"
 README_FILE = Path("README.md")
 ASSETS_DIR = Path("assets")
 HEATMAP_FILE = ASSETS_DIR / "leetcode-heatmap.svg"
