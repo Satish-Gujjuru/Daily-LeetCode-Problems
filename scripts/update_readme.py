@@ -1,9 +1,11 @@
+from pathlib import Path
+from datetime import datetime, date, timedelta
+from collections import Counter
 import json
+import math
 import re
 import subprocess
-from collections import Counter
-from datetime import date, datetime, timedelta
-from pathlib import Path
+import time
 
 import requests
 
@@ -12,74 +14,137 @@ import requests
 # CONFIGURATION
 # ============================================================
 
-# IMPORTANT:
-# Put your ACTUAL LEETCODE username here.
-# Do NOT put your GitHub username unless they are the same.
 USERNAME = "kl2400030372"
 
-README_FILE = Path("README.md")
-ASSETS_DIR = Path("assets")
-HEATMAP_FILE = ASSETS_DIR / "leetcode-heatmap.svg"
+README = Path("README.md")
+ASSETS = Path("assets")
+HEATMAP = ASSETS / "leetcode-heatmap.svg"
 
-LEETCODE_GRAPHQL = "https://leetcode.com/graphql"
-
-START_MARKER = "<!-- LEETCODE_DASHBOARD_START -->"
-END_MARKER = "<!-- LEETCODE_DASHBOARD_END -->"
+LEETCODE_API = "https://leetcode.com/graphql"
 
 HEADERS = {
     "Content-Type": "application/json",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 Chrome/139 Safari/537.36"
+    ),
     "Referer": "https://leetcode.com/",
-    "User-Agent": "Mozilla/5.0",
+}
+
+IGNORE_DIRS = {
+    ".git",
+    ".github",
+    "scripts",
+    "assets",
+    "__pycache__",
 }
 
 
 # ============================================================
-# GRAPHQL
+# BASIC HELPERS
+# ============================================================
+
+def safe_int(value, default=0):
+    """
+    Safely convert a value to an integer.
+
+    LeetCode sometimes returns nested dictionaries, so this
+    function prevents the formatting error from the previous
+    version.
+    """
+    if isinstance(value, dict):
+        value = value.get("count", default)
+
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def format_number(value):
+    """Format numbers with commas."""
+    return f"{safe_int(value):,}"
+
+
+def percentage(part, total):
+    """Return a percentage string."""
+    part = safe_int(part)
+    total = safe_int(total)
+
+    if total == 0:
+        return "0.0%"
+
+    return f"{(part / total) * 100:.1f}%"
+
+
+def escape_markdown(text):
+    """Prevent table-breaking characters."""
+    return str(text).replace("|", "\\|").replace("\n", " ")
+
+
+# ============================================================
+# LEETCODE GRAPHQL
 # ============================================================
 
 def leetcode_query(query, variables=None):
-    response = requests.post(
-        LEETCODE_GRAPHQL,
-        headers=HEADERS,
-        json={
-            "query": query,
-            "variables": variables or {},
-        },
-        timeout=30,
-    )
+    """
+    Execute a LeetCode GraphQL query.
 
-    response.raise_for_status()
+    Retries a few times because external APIs occasionally
+    behave like external APIs.
+    """
 
-    data = response.json()
+    for attempt in range(3):
 
-    if "errors" in data:
-        raise RuntimeError(data["errors"])
+        try:
+            response = requests.post(
+                LEETCODE_API,
+                headers=HEADERS,
+                json={
+                    "query": query,
+                    "variables": variables or {},
+                },
+                timeout=30,
+            )
 
-    return data["data"]
+            response.raise_for_status()
+
+            result = response.json()
+
+            if result.get("errors"):
+                raise RuntimeError(result["errors"])
+
+            return result.get("data", {})
+
+        except Exception:
+
+            if attempt == 2:
+                raise
+
+            time.sleep(2)
 
 
 # ============================================================
-# LEETCODE PROFILE STATISTICS
+# GET MAIN LEETCODE STATISTICS
 # ============================================================
 
 def get_leetcode_stats():
+
     query = """
-    query userStats($username: String!) {
+    query DashboardStats(
+        $username: String!,
+        $year: Int!
+    ) {
+
         allQuestionsCount {
             difficulty
             count
         }
 
         matchedUser(username: $username) {
-            username
-
-            profile {
-                ranking
-                reputation
-                starRating
-            }
 
             submitStatsGlobal {
+
                 acSubmissionNum {
                     difficulty
                     count
@@ -92,40 +157,21 @@ def get_leetcode_stats():
                     submissions
                 }
             }
-        }
-    }
-    """
 
-    data = leetcode_query(
-        query,
-        {"username": USERNAME}
-    )
-
-    user = data.get("matchedUser")
-
-    if not user:
-        raise RuntimeError(
-            f"LeetCode user '{USERNAME}' was not found. "
-            "Check the USERNAME value in scripts/update_readme.py."
-        )
-
-    return data
-
-
-# ============================================================
-# SUBMISSION CALENDAR
-# ============================================================
-
-def get_submission_calendar(year):
-    query = """
-    query userCalendar($username: String!, $year: Int!) {
-        matchedUser(username: $username) {
             userCalendar(year: $year) {
                 activeYears
                 streak
                 totalActiveDays
                 submissionCalendar
             }
+        }
+
+        userContestRanking(username: $username) {
+            attendedContestsCount
+            rating
+            globalRanking
+            topPercentage
+            totalParticipants
         }
     }
     """
@@ -134,40 +180,156 @@ def get_submission_calendar(year):
         query,
         {
             "username": USERNAME,
-            "year": year,
-        }
+            "year": datetime.now().year,
+        },
     )
 
-    user = data.get("matchedUser")
+    if not data.get("matchedUser"):
+        raise RuntimeError(
+            f"LeetCode user '{USERNAME}' was not found."
+        )
 
-    if not user:
-        return {}
+    return data
 
-    calendar = user.get("userCalendar")
 
-    if not calendar:
-        return {}
+# ============================================================
+# NORMALIZE LEETCODE DATA
+# ============================================================
 
-    raw = calendar.get("submissionCalendar", "{}")
+def normalize_stats(data):
+
+    all_questions = {
+        item["difficulty"]: safe_int(item.get("count"))
+        for item in data.get("allQuestionsCount", [])
+    }
+
+    submit_stats = (
+        data["matchedUser"]
+        .get("submitStatsGlobal", {})
+    )
+
+    accepted_raw = submit_stats.get(
+        "acSubmissionNum",
+        [],
+    )
+
+    total_raw = submit_stats.get(
+        "totalSubmissionNum",
+        [],
+    )
+
+    accepted = {
+        item["difficulty"]: {
+            "count": safe_int(item.get("count")),
+            "submissions": safe_int(
+                item.get("submissions")
+            ),
+        }
+        for item in accepted_raw
+    }
+
+    total = {
+        item["difficulty"]: {
+            "count": safe_int(item.get("count")),
+            "submissions": safe_int(
+                item.get("submissions")
+            ),
+        }
+        for item in total_raw
+    }
+
+    difficulties = [
+        "All",
+        "Easy",
+        "Medium",
+        "Hard",
+    ]
+
+    solved = {}
+    accepted_submissions = {}
+    total_submissions = {}
+
+    for difficulty in difficulties:
+
+        accepted_data = accepted.get(
+            difficulty,
+            {},
+        )
+
+        total_data = total.get(
+            difficulty,
+            {},
+        )
+
+        solved[difficulty] = safe_int(
+            accepted_data.get("count")
+        )
+
+        accepted_submissions[difficulty] = safe_int(
+            accepted_data.get("submissions")
+        )
+
+        total_submissions[difficulty] = safe_int(
+            total_data.get("submissions")
+        )
+
+    calendar_data = (
+        data["matchedUser"].get("userCalendar")
+        or {}
+    )
+
+    raw_calendar = calendar_data.get(
+        "submissionCalendar",
+        "{}",
+    )
 
     try:
-        return json.loads(raw)
+
+        if isinstance(raw_calendar, str):
+            calendar = json.loads(raw_calendar)
+
+        elif isinstance(raw_calendar, dict):
+            calendar = raw_calendar
+
+        else:
+            calendar = {}
+
     except json.JSONDecodeError:
-        return {}
+
+        calendar = {}
+
+    normalized_calendar = {
+        int(timestamp): safe_int(count)
+        for timestamp, count in calendar.items()
+    }
+
+    return {
+        "all_questions": all_questions,
+        "solved": solved,
+        "accepted_submissions": accepted_submissions,
+        "total_submissions": total_submissions,
+        "calendar": normalized_calendar,
+        "calendar_meta": calendar_data,
+        "contest": data.get("userContestRanking"),
+    }
 
 
 # ============================================================
-# PROBLEM METADATA
+# GET PROBLEM INFORMATION
 # ============================================================
 
-def get_problem_metadata(slug):
+def get_problem_information(slug):
+
     query = """
-    query questionData($titleSlug: String!) {
-        question(titleSlug: $titleSlug) {
+    query Problem($slug: String!) {
+
+        question(titleSlug: $slug) {
+
             questionFrontendId
             title
             titleSlug
             difficulty
+
             topicTags {
                 name
             }
@@ -176,106 +338,32 @@ def get_problem_metadata(slug):
     """
 
     try:
+
         data = leetcode_query(
             query,
-            {"titleSlug": slug}
+            {"slug": slug},
         )
 
         return data.get("question")
 
-    except Exception:
+    except Exception as error:
+
+        print(
+            f"⚠️ Could not fetch problem '{slug}': {error}"
+        )
+
         return None
 
 
 # ============================================================
-# FIND PROBLEM FOLDERS
+# GITHUB PROBLEM INFORMATION
 # ============================================================
 
-def find_problem_folders():
-    problems = []
+def get_git_date(folder):
 
-    ignored = {
-        ".git",
-        ".github",
-        "scripts",
-        "assets",
-    }
-
-    for item in Path(".").iterdir():
-
-        if not item.is_dir():
-            continue
-
-        if item.name in ignored:
-            continue
-
-        match = re.match(
-            r"^(\d+)-(.+)$",
-            item.name
-        )
-
-        if not match:
-            continue
-
-        number = int(match.group(1))
-        slug = match.group(2)
-
-        problems.append({
-            "number": number,
-            "slug": slug,
-            "folder": item,
-        })
-
-    problems.sort(
-        key=lambda x: x["number"]
-    )
-
-    return problems
-
-
-# ============================================================
-# SOLUTION FILES
-# ============================================================
-
-def find_solution_files(folder):
-    extensions = {
-        ".java": "Java",
-        ".py": "Python",
-        ".cpp": "C++",
-        ".c": "C",
-        ".js": "JavaScript",
-        ".ts": "TypeScript",
-        ".go": "Go",
-        ".rs": "Rust",
-        ".kt": "Kotlin",
-        ".swift": "Swift",
-    }
-
-    results = []
-
-    for file in folder.iterdir():
-
-        if not file.is_file():
-            continue
-
-        if file.suffix.lower() in extensions:
-            results.append(
-                (
-                    file,
-                    extensions[file.suffix.lower()]
-                )
-            )
-
-    return results
-
-
-# ============================================================
-# GIT DATE
-# ============================================================
-
-def get_problem_date(folder):
     try:
-        result = subprocess.run(
+
+        result = subprocess.check_output(
             [
                 "git",
                 "log",
@@ -284,143 +372,148 @@ def get_problem_date(folder):
                 "--",
                 str(folder),
             ],
-            capture_output=True,
             text=True,
-            check=True,
-        )
+            stderr=subprocess.DEVNULL,
+        ).strip()
 
-        value = result.stdout.strip()
+        if result:
 
-        if value:
             return datetime.fromisoformat(
-                value.replace("Z", "+00:00")
+                result.replace("Z", "+00:00")
             ).date()
 
     except Exception:
         pass
 
-    return None
+    return date.today()
 
 
 # ============================================================
-# BUILD PROBLEM DATA
+# LANGUAGE DETECTION
 # ============================================================
 
-def build_problem_data():
+LANGUAGE_MAP = {
+    ".java": "Java",
+    ".py": "Python",
+    ".cpp": "C++",
+    ".cc": "C++",
+    ".cxx": "C++",
+    ".c": "C",
+    ".js": "JavaScript",
+    ".ts": "TypeScript",
+    ".go": "Go",
+    ".rs": "Rust",
+    ".kt": "Kotlin",
+    ".cs": "C#",
+    ".sql": "SQL",
+}
 
-    folders = find_problem_folders()
+
+def detect_languages(folder):
+
+    languages = Counter()
+
+    for file in folder.rglob("*"):
+
+        if not file.is_file():
+            continue
+
+        if file.name.lower() == "readme.md":
+            continue
+
+        extension = file.suffix.lower()
+
+        if extension in LANGUAGE_MAP:
+
+            languages[LANGUAGE_MAP[extension]] += 1
+
+    return dict(languages)
+
+
+# ============================================================
+# SCAN ALL PROBLEM FOLDERS
+# ============================================================
+
+def scan_problems():
 
     problems = []
 
-    print(
-        f"Found {len(folders)} problem folders."
-    )
+    for folder in sorted(Path(".").iterdir()):
 
-    for item in folders:
-
-        print(
-            f"Reading #{item['number']} - {item['slug']}"
-        )
-
-        metadata = get_problem_metadata(
-            item["slug"]
-        )
-
-        if not metadata:
-            print(
-                f"Could not fetch metadata for "
-                f"{item['slug']}"
-            )
+        if not folder.is_dir():
             continue
 
-        solution_files = find_solution_files(
-            item["folder"]
+        if folder.name in IGNORE_DIRS:
+            continue
+
+        match = re.match(
+            r"^(\d+)-(.+)$",
+            folder.name,
         )
 
-        languages = sorted(
-            {
-                language
-                for _, language in solution_files
-            }
+        if not match:
+            continue
+
+        number = int(match.group(1))
+        slug = match.group(2)
+
+        print(
+            f"   Reading #{number} - {slug}"
         )
 
-        problems.append({
-            "number": int(
-                metadata["questionFrontendId"]
-            ),
-            "title": metadata["title"],
-            "slug": metadata["titleSlug"],
-            "difficulty": metadata["difficulty"],
-            "topics": [
+        metadata = get_problem_information(slug)
+
+        if metadata:
+
+            title = metadata.get(
+                "title",
+                slug.replace("-", " ").title(),
+            )
+
+            difficulty = metadata.get(
+                "difficulty",
+                "Unknown",
+            )
+
+            topics = [
                 tag["name"]
                 for tag in metadata.get(
                     "topicTags",
-                    []
+                    [],
                 )
-            ],
-            "languages": languages,
-            "folder": str(item["folder"]),
-            "date": get_problem_date(
-                item["folder"]
-            ),
-        })
+            ]
+
+        else:
+
+            title = slug.replace(
+                "-",
+                " ",
+            ).title()
+
+            difficulty = "Unknown"
+
+            topics = []
+
+        languages = detect_languages(folder)
+
+        problems.append(
+            {
+                "number": number,
+                "slug": slug,
+                "title": title,
+                "difficulty": difficulty,
+                "topics": topics,
+                "languages": languages,
+                "date": get_git_date(folder),
+                "path": folder.as_posix(),
+            }
+        )
 
     problems.sort(
-        key=lambda x: x["number"]
+        key=lambda problem: problem["number"]
     )
 
     return problems
-
-
-# ============================================================
-# FORMATTERS
-# ============================================================
-
-def difficulty_emoji(difficulty):
-
-    if difficulty == "Easy":
-        return "🟢"
-
-    if difficulty == "Medium":
-        return "🟡"
-
-    return "🔴"
-
-
-def progress_bar(value, maximum, length=20):
-
-    if maximum <= 0:
-        return "░" * length
-
-    ratio = min(
-        max(value / maximum, 0),
-        1
-    )
-
-    filled = int(
-        ratio * length
-    )
-
-    return (
-        "█" * filled
-        + "░" * (length - filled)
-    )
-
-
-def percentage(value, maximum):
-
-    if maximum <= 0:
-        return 0
-
-    return round(
-        value / maximum * 100,
-        1
-    )
-
-
-def format_number(value):
-
-    return f"{value:,}"
 
 
 # ============================================================
@@ -431,862 +524,865 @@ def calculate_streaks(calendar):
 
     active_dates = set()
 
-    for timestamp in calendar:
+    for timestamp, count in calendar.items():
+
+        if count <= 0:
+            continue
 
         try:
-            dt = datetime.fromtimestamp(
-                int(timestamp)
+
+            active_date = datetime.fromtimestamp(
+                timestamp
             ).date()
 
-            active_dates.add(dt)
+            active_dates.add(active_date)
 
         except Exception:
             continue
 
     if not active_dates:
-        return 0, 0, active_dates
-
-    sorted_dates = sorted(
-        active_dates
-    )
-
-    longest = 1
-    current_run = 1
-
-    for i in range(
-        1,
-        len(sorted_dates)
-    ):
-
-        if (
-            sorted_dates[i]
-            == sorted_dates[i - 1]
-            + timedelta(days=1)
-        ):
-            current_run += 1
-
-        else:
-            current_run = 1
-
-        longest = max(
-            longest,
-            current_run
-        )
+        return 0, 0, 0
 
     today = date.today()
 
-    if today in active_dates:
-        current = 0
-        check = today
+    # Current streak
+    current_streak = 0
 
-        while check in active_dates:
-            current += 1
-            check -= timedelta(days=1)
+    cursor = today
 
-    elif (
-        today - timedelta(days=1)
-        in active_dates
-    ):
-        current = 0
-        check = today - timedelta(days=1)
+    while cursor in active_dates:
 
-        while check in active_dates:
-            current += 1
-            check -= timedelta(days=1)
+        current_streak += 1
 
-    else:
-        current = 0
+        cursor -= timedelta(days=1)
 
-    return current, longest, active_dates
+    # If no submission today, continue from yesterday
+    if current_streak == 0:
+
+        cursor = today - timedelta(days=1)
+
+        while cursor in active_dates:
+
+            current_streak += 1
+
+            cursor -= timedelta(days=1)
+
+    # Longest streak
+    longest_streak = 0
+    running = 0
+    previous = None
+
+    for current_date in sorted(active_dates):
+
+        if (
+            previous is not None
+            and current_date
+            == previous + timedelta(days=1)
+        ):
+
+            running += 1
+
+        else:
+
+            running = 1
+
+        longest_streak = max(
+            longest_streak,
+            running,
+        )
+
+        previous = current_date
+
+    return (
+        current_streak,
+        longest_streak,
+        len(active_dates),
+    )
 
 
 # ============================================================
 # HEATMAP
 # ============================================================
 
-def generate_heatmap(calendar):
+def heat_color(level):
 
-    ASSETS_DIR.mkdir(
+    colors = [
+        "#161b22",
+        "#0e4429",
+        "#006d32",
+        "#26a641",
+        "#39d353",
+    ]
+
+    level = max(
+        0,
+        min(4, level),
+    )
+
+    return colors[level]
+
+
+def create_heatmap(calendar):
+
+    ASSETS.mkdir(
         parents=True,
-        exist_ok=True
+        exist_ok=True,
     )
 
     today = date.today()
 
-    end_date = today
+    start = today - timedelta(days=364)
 
-    # 52 weeks + alignment
-    start_date = (
-        end_date
-        - timedelta(days=364)
-    )
+    days = []
 
-    start_date -= timedelta(
-        days=(start_date.weekday() + 1) % 7
-    )
+    current = start
 
-    dates = []
+    while current <= today:
 
-    current = start_date
+        timestamp = int(
+            datetime(
+                current.year,
+                current.month,
+                current.day,
+            ).timestamp()
+        )
 
-    while current <= end_date:
+        submissions = calendar.get(
+            timestamp,
+            0,
+        )
 
-        dates.append(current)
+        days.append(
+            (
+                current,
+                submissions,
+            )
+        )
+
         current += timedelta(days=1)
 
-    counts = {}
-
-    for timestamp, count in calendar.items():
-
-        try:
-            dt = datetime.fromtimestamp(
-                int(timestamp)
-            ).date()
-
-            counts[dt] = int(count)
-
-        except Exception:
-            continue
-
     maximum = max(
-        counts.values(),
-        default=0
+        [count for _, count in days] + [1]
     )
 
-    def level(count):
-
-        if count <= 0:
-            return 0
-
-        if maximum <= 1:
-            return 4
-
-        ratio = count / maximum
-
-        if ratio <= 0.25:
-            return 1
-
-        if ratio <= 0.50:
-            return 2
-
-        if ratio <= 0.75:
-            return 3
-
-        return 4
-
-    cell = 12
+    cell_size = 14
     gap = 3
 
-    weeks = []
+    left = 35
+    top = 30
 
-    current = start_date
+    first_day = days[0][0]
 
-    while current <= end_date:
+    leading_days = (
+        first_day.weekday() + 1
+    ) % 7
 
-        week = []
+    total_cells = (
+        leading_days
+        + len(days)
+    )
 
-        for day_index in range(7):
+    weeks = math.ceil(
+        total_cells / 7
+    )
 
-            day = current + timedelta(
-                days=day_index
+    width = max(
+        980,
+        left
+        + weeks * (cell_size + gap)
+        + 20,
+    )
+
+    height = 175
+
+    svg = []
+
+    svg.append(
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'viewBox="0 0 {width} {height}">'
+    )
+
+    svg.append(
+        '<rect width="100%" height="100%" '
+        'rx="12" fill="#0d1117"/>'
+    )
+
+    svg.append(
+        '<text x="20" y="20" '
+        'fill="#8b949e" '
+        'font-size="12" '
+        'font-family="Arial">'
+        'LeetCode submission activity'
+        '</text>'
+    )
+
+    for index, (day, count) in enumerate(days):
+
+        position = leading_days + index
+
+        column = position // 7
+        row = position % 7
+
+        x = (
+            left
+            + column
+            * (cell_size + gap)
+        )
+
+        y = (
+            top
+            + row
+            * (cell_size + gap)
+        )
+
+        if count == 0:
+
+            level = 0
+
+        else:
+
+            level = min(
+                4,
+                1
+                + int(
+                    (
+                        count
+                        / maximum
+                    )
+                    * 3.99
+                ),
             )
 
-            if day <= end_date:
-                week.append(day)
+        plural = (
+            "submission"
+            if count == 1
+            else "submissions"
+        )
 
-        weeks.append(week)
-
-        current += timedelta(days=7)
-
-    width = len(weeks) * (
-        cell + gap
-    ) + 40
-
-    height = 7 * (
-        cell + gap
-    ) + 30
-
-    svg = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" '
-        f'width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}">',
-        '<rect width="100%" height="100%" '
-        'fill="#0d1117"/>',
-    ]
-
-    # Day labels
-    labels = [
-        ("Mon", 1),
-        ("Wed", 3),
-        ("Fri", 5),
-    ]
-
-    for label, row in labels:
-
-        y = 15 + row * (
-            cell + gap
+        tooltip = (
+            f"{day.isoformat()}: "
+            f"{count} {plural}"
         )
 
         svg.append(
-            f'<text x="0" y="{y}" '
-            f'font-size="9" '
-            f'fill="#8b949e">{label}</text>'
+            f'<rect '
+            f'x="{x}" '
+            f'y="{y}" '
+            f'width="{cell_size}" '
+            f'height="{cell_size}" '
+            f'rx="3" '
+            f'fill="{heat_color(level)}">'
+            f'<title>{escape_markdown(tooltip)}</title>'
+            f'</rect>'
         )
 
-    for week_index, week in enumerate(weeks):
+    svg.append(
+        '<text x="20" y="160" '
+        'fill="#8b949e" '
+        'font-size="11" '
+        'font-family="Arial">'
+        'Less'
+        '</text>'
+    )
 
-        for day in week:
+    for level in range(5):
 
-            row = (
-                day.weekday()
-            )
+        x = 55 + level * 18
 
-            x = 25 + week_index * (
-                cell + gap
-            )
+        svg.append(
+            f'<rect '
+            f'x="{x}" '
+            f'y="150" '
+            f'width="12" '
+            f'height="12" '
+            f'rx="3" '
+            f'fill="{heat_color(level)}"/>'
+        )
 
-            y = 5 + row * (
-                cell + gap
-            )
-
-            count = counts.get(
-                day,
-                0
-            )
-
-            lvl = level(count)
-
-            opacity = [
-                "0.08",
-                "0.25",
-                "0.45",
-                "0.70",
-                "1.0",
-            ][lvl]
-
-            title = (
-                f"{count} submission"
-                + (
-                    "s"
-                    if count != 1
-                    else ""
-                )
-                + f" on {day.isoformat()}"
-            )
-
-            svg.append(
-                f'<rect x="{x}" y="{y}" '
-                f'width="{cell}" height="{cell}" '
-                f'rx="2" '
-                f'fill="#39d353" '
-                f'fill-opacity="{opacity}">'
-                f'<title>{title}</title>'
-                f'</rect>'
-            )
+    svg.append(
+        '<text x="155" y="160" '
+        'fill="#8b949e" '
+        'font-size="11" '
+        'font-family="Arial">'
+        'More'
+        '</text>'
+    )
 
     svg.append("</svg>")
 
-    HEATMAP_FILE.write_text(
+    HEATMAP.write_text(
         "\n".join(svg),
-        encoding="utf-8"
+        encoding="utf-8",
     )
 
 
 # ============================================================
-# DASHBOARD SECTIONS
+# DIFFICULTY PROGRESS BAR
 # ============================================================
 
-def stats_section(
-    solved,
-    total_submissions,
-    acceptance,
-    current_streak,
-    longest_streak,
-    active_days,
+def progress_bar(solved, total, width=24):
+
+    solved = safe_int(solved)
+    total = safe_int(total)
+
+    if total == 0:
+        return "░" * width
+
+    ratio = solved / total
+
+    filled = round(
+        ratio * width
+    )
+
+    return (
+        "█" * filled
+        + "░" * (width - filled)
+    )
+
+
+# ============================================================
+# STATISTICS SECTION
+# ============================================================
+
+def build_statistics_section(
+    stats,
+    problems,
 ):
+
+    solved = stats["solved"]
+
+    accepted = stats[
+        "accepted_submissions"
+    ]["All"]
+
+    total = stats[
+        "total_submissions"
+    ]["All"]
+
+    current_streak, longest_streak, active_days = (
+        calculate_streaks(
+            stats["calendar"]
+        )
+    )
+
+    easy_total = stats[
+        "all_questions"
+    ].get("Easy", 0)
+
+    medium_total = stats[
+        "all_questions"
+    ].get("Medium", 0)
+
+    hard_total = stats[
+        "all_questions"
+    ].get("Hard", 0)
 
     return f"""
 ## 📊 LeetCode Statistics
 
-| 🧩 Total Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard |
-|:---:|:---:|:---:|:---:|
-| **{format_number(solved)}** | **{format_number(solved['Easy'])}** | **{format_number(solved['Medium'])}** | **{format_number(solved['Hard'])}** |
+| Metric | Value |
+|---|---:|
+| 🧩 **Problems Solved** | **{format_number(solved["All"])}** |
+| 🟢 Easy | {format_number(solved["Easy"])} / {format_number(easy_total)} |
+| 🟡 Medium | {format_number(solved["Medium"])} / {format_number(medium_total)} |
+| 🔴 Hard | {format_number(solved["Hard"])} / {format_number(hard_total)} |
+| 🎯 Acceptance Rate | **{percentage(accepted, total)}** |
+| 🔥 Current Streak | **{current_streak} days** |
+| 🏆 Longest Streak | **{longest_streak} days** |
+| 📅 Active Days | **{active_days}** |
+| 📁 Problems in Repository | **{len(problems)}** |
 
-| 🔥 Current Streak | 🏆 Longest Streak | 📅 Active Days | 📤 Submissions | 🎯 Acceptance |
-|:---:|:---:|:---:|:---:|:---:|
-| **{current_streak} days** | **{longest_streak} days** | **{active_days}** | **{format_number(total_submissions)}** | **{acceptance}%** |
+### Difficulty Progress
+
+| Difficulty | Progress | Completion |
+|---|---|---:|
+| 🟢 Easy | `{progress_bar(solved["Easy"], easy_total)}` | {percentage(solved["Easy"], easy_total)} |
+| 🟡 Medium | `{progress_bar(solved["Medium"], medium_total)}` | {percentage(solved["Medium"], medium_total)} |
+| 🔴 Hard | `{progress_bar(solved["Hard"], hard_total)}` | {percentage(solved["Hard"], hard_total)} |
 """
 
 
-def difficulty_section(
-    solved,
-    total_questions
-):
+# ============================================================
+# CONTEST SECTION
+# ============================================================
 
-    rows = []
+def build_contest_section(stats):
 
-    for difficulty, emoji in [
-        ("Easy", "🟢"),
-        ("Medium", "🟡"),
-        ("Hard", "🔴"),
-    ]:
+    contest = stats.get("contest")
 
-        current = solved[difficulty]
-        maximum = total_questions[difficulty]
-
-        percent = percentage(
-            current,
-            maximum
-        )
-
-        bar = progress_bar(
-            current,
-            maximum,
-            25
-        )
-
-        rows.append(
-            f"| {emoji} **{difficulty}** "
-            f"| **{current} / {maximum}** "
-            f"| `{bar}` **{percent}%** |"
-        )
-
-    return f"""
-## 🎯 Difficulty Progress
-
-| Difficulty | Solved | Progress |
-|:---|---:|:---|
-{chr(10).join(rows)}
-"""
-
-
-def topic_section(topic_counts):
-
-    if not topic_counts:
+    if not contest:
         return ""
 
-    top_topics = topic_counts.most_common(
-        15
+    rating = safe_int(
+        contest.get("rating")
     )
 
-    maximum = top_topics[0][1]
+    ranking = safe_int(
+        contest.get("globalRanking")
+    )
 
-    rows = []
-
-    for topic, count in top_topics:
-
-        bar = progress_bar(
-            count,
-            maximum,
-            18
+    contests = safe_int(
+        contest.get(
+            "attendedContestsCount"
         )
+    )
 
-        rows.append(
-            f"| **{topic}** | {count} | "
-            f"`{bar}` |"
-        )
+    top = contest.get(
+        "topPercentage"
+    )
+
+    if top is not None:
+
+        try:
+            top_text = (
+                f"{float(top):.2f}%"
+            )
+
+        except (
+            TypeError,
+            ValueError,
+        ):
+            top_text = "N/A"
+
+    else:
+
+        top_text = "N/A"
 
     return f"""
-## 🧠 DSA Skills
+## 🏁 Contest Profile
 
-| Topic | Problems | Distribution |
-|:---|---:|:---|
-{chr(10).join(rows)}
+| Rating | Global Rank | Top Percentage | Contests |
+|---:|---:|---:|---:|
+| **{rating:,}** | **{ranking:,}** | **{top_text}** | **{contests}** |
 """
 
 
-def language_section(language_counts):
+# ============================================================
+# RECENT PROBLEMS
+# ============================================================
 
-    if not language_counts:
-        return ""
+def build_recent_section(problems):
 
-    total = sum(
-        language_counts.values()
-    )
-
-    rows = []
-
-    for language, count in language_counts.most_common():
-
-        percent = percentage(
-            count,
-            total
-        )
-
-        bar = progress_bar(
-            count,
-            max(language_counts.values()),
-            20
-        )
-
-        rows.append(
-            f"| **{language}** | {count} | "
-            f"`{bar}` {percent}% |"
-        )
-
-    return f"""
-## 💻 Languages
-
-| Language | Solutions | Usage |
-|:---|---:|:---|
-{chr(10).join(rows)}
-"""
-
-
-def milestone_section(total_solved):
-
-    milestones = [
-        1,
-        10,
-        25,
-        50,
-        100,
-        150,
-        200,
-        300,
-        500,
-        1000,
-    ]
-
-    rows = []
-
-    for milestone in milestones:
-
-        if total_solved >= milestone:
-            status = "✅ Completed"
-        else:
-            remaining = milestone - total_solved
-            status = (
-                f"🔒 {remaining} to go"
-            )
-
-        rows.append(
-            f"| **{milestone} Problems** | {status} |"
-        )
-
-    return f"""
-## 🏅 Milestones
-
-| Milestone | Status |
-|:---|:---|
-{chr(10).join(rows)}
-"""
-
-
-def problem_section(problems):
-
-    sections = []
-
-    for difficulty in [
-        "Easy",
-        "Medium",
-        "Hard",
-    ]:
-
-        selected = [
-            p
-            for p in problems
-            if p["difficulty"] == difficulty
-        ]
-
-        if not selected:
-            continue
-
-        emoji = difficulty_emoji(
-            difficulty
-        )
-
-        rows = []
-
-        for p in selected:
-
-            folder_link = (
-                f"./{p['folder']}"
-            )
-
-            topics = ", ".join(
-                p["topics"][:4]
-            )
-
-            languages = ", ".join(
-                p["languages"]
-            )
-
-            rows.append(
-                f"| **#{p['number']}** | "
-                f"[{p['title']}]"
-                f"({folder_link}) | "
-                f"{topics or '—'} | "
-                f"{languages or '—'} |"
-            )
-
-        sections.append(
-            f"""
-### {emoji} {difficulty}
-
-| # | Problem | Topics | Language |
-|:---:|:---|:---|:---|
-{chr(10).join(rows)}
-"""
-        )
-
-    return "\n".join(
-        sections
-    )
-
-
-def recent_activity_section(problems):
-
-    dated = [
-        p
-        for p in problems
-        if p["date"] is not None
-    ]
-
-    dated.sort(
-        key=lambda x: x["date"],
-        reverse=True
-    )
-
-    recent = dated[:20]
+    recent = sorted(
+        problems,
+        key=lambda p: p["date"],
+        reverse=True,
+    )[:10]
 
     if not recent:
         return ""
 
-    rows = []
+    icons = {
+        "Easy": "🟢",
+        "Medium": "🟡",
+        "Hard": "🔴",
+        "Unknown": "⚪",
+    }
 
-    for p in recent:
-
-        rows.append(
-            f"| {p['date'].strftime('%d %b %Y')} "
-            f"| {difficulty_emoji(p['difficulty'])} "
-            f"| [{p['title']}]"
-            f"(./{p['folder']}) |"
-        )
-
-    return f"""
-## 📅 Recent Solved Problems
-
-| Date | Level | Problem |
-|:---|:---:|:---|
-{chr(10).join(rows)}
-"""
-
-
-def monthly_progress_section(problems):
-
-    dated = [
-        p
-        for p in problems
-        if p["date"] is not None
+    rows = [
+        "## 🕐 Recently Added",
+        "",
+        "| Problem | Difficulty | Date |",
+        "|---|---|---|",
     ]
 
-    if not dated:
-        return ""
-
-    months = Counter(
-        p["date"].strftime("%Y-%m")
-        for p in dated
-    )
-
-    rows = []
-
-    for month, count in sorted(
-        months.items(),
-        reverse=True
-    )[:12]:
+    for problem in recent:
 
         rows.append(
-            f"| **{month}** | {count} |"
+            f'| [{problem["number"]}. '
+            f'{escape_markdown(problem["title"])}]'
+            f'(./{problem["path"]}) | '
+            f'{icons.get(problem["difficulty"], "⚪")} '
+            f'{problem["difficulty"]} | '
+            f'{problem["date"]} |'
         )
 
-    return f"""
-## 📈 Monthly Progress
-
-| Month | Problems Solved |
-|:---|---:|
-{chr(10).join(rows)}
-"""
+    return "\n".join(rows)
 
 
 # ============================================================
-# README GENERATION
+# ALL PROBLEMS SECTION
 # ============================================================
 
-def build_dashboard():
+def build_problems_section(problems):
 
-    print("Fetching LeetCode statistics...")
-
-    data = get_leetcode_stats()
-
-    user = data["matchedUser"]
-
-    ac_stats = {
-        item["difficulty"]: item
-        for item in user[
-            "submitStatsGlobal"
-        ]["acSubmissionNum"]
+    groups = {
+        "Easy": [],
+        "Medium": [],
+        "Hard": [],
+        "Unknown": [],
     }
-
-    total_stats = {
-        item["difficulty"]: item
-        for item in user[
-            "submitStatsGlobal"
-        ]["totalSubmissionNum"]
-    }
-
-    solved = {
-        "Easy": ac_stats.get(
-            "Easy",
-            {}
-        ).get("count", 0),
-
-        "Medium": ac_stats.get(
-            "Medium",
-            {}
-        ).get("count", 0),
-
-        "Hard": ac_stats.get(
-            "Hard",
-            {}
-        ).get("count", 0),
-    }
-
-    solved["All"] = (
-        solved["Easy"]
-        + solved["Medium"]
-        + solved["Hard"]
-    )
-
-    total_submissions = (
-        total_stats.get(
-            "All",
-            {}
-        ).get("submissions", 0)
-    )
-
-    accepted_submissions = (
-        ac_stats.get(
-            "All",
-            {}
-        ).get("submissions", 0)
-    )
-
-    if total_submissions:
-        acceptance = round(
-            accepted_submissions
-            / total_submissions
-            * 100,
-            1
-        )
-    else:
-        acceptance = 0
-
-    # Global LeetCode question counts
-    total_questions = {}
-
-    for item in data[
-        "allQuestionsCount"
-    ]:
-
-        difficulty = item[
-            "difficulty"
-        ]
-
-        if difficulty == "All":
-            continue
-
-        total_questions[
-            difficulty
-        ] = item["count"]
-
-    for difficulty in [
-        "Easy",
-        "Medium",
-        "Hard",
-    ]:
-
-        total_questions.setdefault(
-            difficulty,
-            0
-        )
-
-    print("Fetching submission calendar...")
-
-    current_year = date.today().year
-
-    calendar = {}
-
-    for year in [
-        current_year - 1,
-        current_year,
-    ]:
-
-        calendar.update(
-            get_submission_calendar(
-                year
-            )
-        )
-
-    current_streak, longest_streak, active_dates = (
-        calculate_streaks(calendar)
-    )
-
-    generate_heatmap(calendar)
-
-    print("Reading repository problems...")
-
-    problems = build_problem_data()
-
-    topic_counts = Counter()
-
-    language_counts = Counter()
 
     for problem in problems:
 
-        for topic in problem["topics"]:
-            topic_counts[topic] += 1
+        groups.setdefault(
+            problem["difficulty"],
+            [],
+        ).append(problem)
 
-        for language in problem["languages"]:
-            language_counts[language] += 1
+    sections = [
+        "## 🧩 Problems Solved",
+        "",
+    ]
 
-    # --------------------------------------------------------
-    # Dashboard header
-    # --------------------------------------------------------
+    order = [
+        ("Easy", "🟢"),
+        ("Medium", "🟡"),
+        ("Hard", "🔴"),
+        ("Unknown", "⚪"),
+    ]
 
-    dashboard = f"""
-{START_MARKER}
+    for difficulty, icon in order:
 
-# 🧩 {USERNAME}'s LeetCode Journey
+        items = groups.get(
+            difficulty,
+            [],
+        )
 
-> Daily problem solving • Data Structures & Algorithms • Continuous improvement
+        if not items:
+            continue
+
+        sections.append(
+            f"### {icon} {difficulty} "
+            f"({len(items)})"
+        )
+
+        sections.append("")
+
+        sections.append(
+            "| # | Problem | Topics | Solution | Date |"
+        )
+
+        sections.append(
+            "|---:|---|---|---|---|"
+        )
+
+        for problem in sorted(
+            items,
+            key=lambda p: p["number"],
+        ):
+
+            topics = ", ".join(
+                problem["topics"][:4]
+            )
+
+            if not topics:
+                topics = "—"
+
+            sections.append(
+                f'| {problem["number"]} | '
+                f'**{escape_markdown(problem["title"])}** | '
+                f'{escape_markdown(topics)} | '
+                f'[Open](./{problem["path"]}) | '
+                f'{problem["date"]} |'
+            )
+
+        sections.append("")
+
+    return "\n".join(sections)
+
+
+# ============================================================
+# TOPICS SECTION
+# ============================================================
+
+def build_topics_section(problems):
+
+    topics = Counter()
+
+    for problem in problems:
+
+        topics.update(
+            problem["topics"]
+        )
+
+    if not topics:
+        return ""
+
+    rows = [
+        "## 🧠 Top Topics",
+        "",
+        "| Topic | Problems |",
+        "|---|---:|",
+    ]
+
+    for topic, count in topics.most_common(15):
+
+        rows.append(
+            f"| {escape_markdown(topic)} | {count} |"
+        )
+
+    return "\n".join(rows)
+
+
+# ============================================================
+# LANGUAGES SECTION
+# ============================================================
+
+def build_languages_section(problems):
+
+    languages = Counter()
+
+    for problem in problems:
+
+        languages.update(
+            problem["languages"]
+        )
+
+    if not languages:
+        return ""
+
+    rows = [
+        "## 💻 Languages Used",
+        "",
+        "| Language | Solutions |",
+        "|---|---:|",
+    ]
+
+    for language, count in languages.most_common():
+
+        rows.append(
+            f"| {language} | {count} |"
+        )
+
+    return "\n".join(rows)
+
+
+# ============================================================
+# 30-DAY ACTIVITY
+# ============================================================
+
+def build_activity_section(stats):
+
+    calendar = stats["calendar"]
+
+    if not calendar:
+        return ""
+
+    today = date.today()
+
+    start = today - timedelta(days=29)
+
+    rows = [
+        "## 📅 Last 30 Days",
+        "",
+        "| Date | Submissions |",
+        "|---|---:|",
+    ]
+
+    current = start
+
+    while current <= today:
+
+        timestamp = int(
+            datetime(
+                current.year,
+                current.month,
+                current.day,
+            ).timestamp()
+        )
+
+        count = calendar.get(
+            timestamp,
+            0,
+        )
+
+        rows.append(
+            f"| {current.isoformat()} | {count} |"
+        )
+
+        current += timedelta(days=1)
+
+    return "\n".join(rows)
+
+
+# ============================================================
+# COMPLETE README
+# ============================================================
+
+def build_readme(
+    stats,
+    problems,
+):
+
+    solved = stats["solved"]
+
+    current_streak, longest_streak, _ = (
+        calculate_streaks(
+            stats["calendar"]
+        )
+    )
+
+    generated = datetime.now().strftime(
+        "%d %b %Y, %H:%M"
+    )
+
+    statistics = build_statistics_section(
+        stats,
+        problems,
+    )
+
+    contest = build_contest_section(
+        stats
+    )
+
+    recent = build_recent_section(
+        problems
+    )
+
+    all_problems = build_problems_section(
+        problems
+    )
+
+    topics = build_topics_section(
+        problems
+    )
+
+    languages = build_languages_section(
+        problems
+    )
+
+    activity = build_activity_section(
+        stats
+    )
+
+    return f"""# 🧑‍💻 Satish's LeetCode Journey
+
+<p align="center">
+  <img
+    src="./assets/leetcode-heatmap.svg"
+    alt="LeetCode submission heatmap"
+    width="950"
+  />
+</p>
+
+<p align="center">
+  <b>Daily LeetCode practice, automatically tracked through GitHub.</b>
+  <br>
+  Accepted solutions synced by LeetSync are reflected in this dashboard.
+</p>
 
 ---
 
-{stats_section(
-    solved,
-    total_submissions,
-    acceptance,
-    current_streak,
-    longest_streak,
-    len(active_dates),
-)}
+## ⚡ Quick Overview
 
-## 🔥 Submission Activity
-
-![LeetCode Submission Heatmap](./assets/leetcode-heatmap.svg)
+| 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
+|---:|---:|---:|---:|---:|---:|
+| **{format_number(solved["All"])}** | **{format_number(solved["Easy"])}** | **{format_number(solved["Medium"])}** | **{format_number(solved["Hard"])}** | **{current_streak} days** | **{longest_streak} days** |
 
 ---
 
-{difficulty_section(
-    solved,
-    total_questions
-)}
+{statistics}
+
+{contest}
+
+{recent}
+
+{all_problems}
+
+{topics}
+
+{languages}
+
+{activity}
 
 ---
 
-{topic_section(topic_counts)}
+## 🔗 Profiles
+
+- 🟧 [LeetCode](https://leetcode.com/u/{USERNAME}/)
+- 🐙 [GitHub](https://github.com/{USERNAME})
 
 ---
 
-{language_section(language_counts)}
-
----
-
-{monthly_progress_section(problems)}
-
----
-
-{milestone_section(solved["All"])}
-
----
-
-{recent_activity_section(problems)}
-
----
-
-## 📚 Problems Solved
-
-{problem_section(problems)}
-
----
-
-### 🚀 Keep Solving
-
-**{solved["All"]} problems solved.**
-
-Every submission is another step toward stronger problem-solving skills.
-
-{END_MARKER}
+<p align="center">
+  <sub>
+    🤖 Automatically updated by GitHub Actions
+    <br>
+    Last update: {generated}
+  </sub>
+</p>
 """
-
-    # --------------------------------------------------------
-    # Preserve custom README content outside markers
-    # --------------------------------------------------------
-
-    if README_FILE.exists():
-
-        old_readme = README_FILE.read_text(
-            encoding="utf-8"
-        )
-
-    else:
-        old_readme = ""
-
-    if (
-        START_MARKER in old_readme
-        and END_MARKER in old_readme
-    ):
-
-        before = old_readme.split(
-            START_MARKER,
-            1
-        )[0]
-
-        after = old_readme.split(
-            END_MARKER,
-            1
-        )[1]
-
-        final_readme = (
-            before.rstrip()
-            + "\n\n"
-            + dashboard.strip()
-            + "\n\n"
-            + after.lstrip()
-        )
-
-    else:
-
-        final_readme = (
-            dashboard.strip()
-            + "\n"
-        )
-
-    README_FILE.write_text(
-        final_readme,
-        encoding="utf-8"
-    )
-
-    print(
-        "README dashboard updated successfully."
-    )
 
 
 # ============================================================
 # MAIN
 # ============================================================
 
+def main():
+
+    print(
+        "🚀 Building LeetCode dashboard..."
+    )
+
+    print(
+        "📡 Fetching LeetCode statistics..."
+    )
+
+    raw_data = get_leetcode_stats()
+
+    stats = normalize_stats(
+        raw_data
+    )
+
+    print(
+        "📅 Reading submission calendar..."
+    )
+
+    print(
+        "📁 Scanning solved-problem folders..."
+    )
+
+    problems = scan_problems()
+
+    print(
+        f"   Found {len(problems)} problem folders."
+    )
+
+    print(
+        "🔥 Creating submission heatmap..."
+    )
+
+    create_heatmap(
+        stats["calendar"]
+    )
+
+    print(
+        "📝 Generating README..."
+    )
+
+    README.write_text(
+        build_readme(
+            stats,
+            problems,
+        ),
+        encoding="utf-8",
+    )
+
+    print(
+        "✅ Dashboard generated successfully!"
+    )
+
+    print(
+        f"   Total solved : {stats['solved']['All']}"
+    )
+
+    print(
+        f"   Easy         : {stats['solved']['Easy']}"
+    )
+
+    print(
+        f"   Medium       : {stats['solved']['Medium']}"
+    )
+
+    print(
+        f"   Hard         : {stats['solved']['Hard']}"
+    )
+
+    print(
+        f"   GitHub folders: {len(problems)}"
+    )
+
+
 if __name__ == "__main__":
-
-    if (
-        USERNAME
-        == "YOUR_LEETCODE_USERNAME"
-    ):
-
-        raise RuntimeError(
-            "Set USERNAME to your actual "
-            "LeetCode username first."
-        )
-
-    build_dashboard()
+    main()
