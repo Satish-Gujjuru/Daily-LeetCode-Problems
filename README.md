@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **65** | **55** | **9** | **1** | **15 days** | **15 days** |
+| **65** | **55** | **9** | **1** | **16 days** | **16 days** |
 
 ---
 
@@ -33,11 +33,11 @@
 | 🟢 Easy | 55 / 963 |
 | 🟡 Medium | 9 / 2,111 |
 | 🔴 Hard | 1 / 972 |
-| 🎯 Acceptance Rate | **76.2%** |
-| 🔥 Current Streak | **15 days** |
-| 🏆 Longest Streak | **15 days** |
-| 📅 Active Days | **25** |
-| 📁 Problems in Repository | **2** |
+| 🎯 Acceptance Rate | **76.4%** |
+| 🔥 Current Streak | **16 days** |
+| 🏆 Longest Streak | **16 days** |
+| 📅 Active Days | **26** |
+| 📁 Problems in Repository | **3** |
 
 ### Difficulty Progress
 
@@ -60,10 +60,17 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [1406. Subtract the Product and Sum of Digits of an Integer](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 🟢 Easy | 2026-09-07 |
 | [75. Sort Colors](./75-sort-colors) | 🟡 Medium | 2026-09-06 |
 | [4285. Smallest Stable Index II](./4285-smallest-stable-index-ii) | 🟡 Medium | 2026-09-06 |
 
 ## 🧩 Problems Solved
+
+### 🟢 Easy (1)
+
+| # | Problem | Topics | Solution | Date |
+|---:|---|---|---|---|
+| 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 
 ### 🟡 Medium (2)
 
@@ -82,6 +89,7 @@
 | Sorting | 1 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
+| Math | 1 |
 | Prefix Sum | 1 |
 
 ## 💻 Languages Used
@@ -95,7 +103,6 @@
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-08 | 1 |
 | 2026-08-09 | 0 |
 | 2026-08-10 | 4 |
 | 2026-08-11 | 3 |
@@ -125,6 +132,7 @@
 | 2026-09-04 | 2 |
 | 2026-09-05 | 3 |
 | 2026-09-06 | 1 |
+| 2026-09-07 | 1 |
 
 ---
 
@@ -139,6 +147,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 06 Sep 2026, 20:38
+    Last update: 07 Sep 2026, 12:37
   </sub>
 </p>
