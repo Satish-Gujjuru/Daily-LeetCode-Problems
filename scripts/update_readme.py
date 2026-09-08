@@ -899,10 +899,10 @@ def create_heatmap(calendar):
 
     # Current dropdown-like control
     dropdown_x = width - 92
-
+    
     svg.append(
         f'<rect '
-        f'x="{dropdown_x}" y="48" '
+        f'x="{dropdown_x}" y="14" '
         'width="68" height="30" '
         'rx="6" '
         'fill="#303030"/>'
@@ -910,7 +910,7 @@ def create_heatmap(calendar):
 
     svg.append(
         f'<text '
-        f'x="{dropdown_x + 12}" y="68" '
+        f'x="{dropdown_x + 12}" y="34" '
         'fill="#f0f0f0" '
         'font-size="12" '
         'font-family="Arial">'
@@ -920,7 +920,7 @@ def create_heatmap(calendar):
 
     svg.append(
         f'<path '
-        f'd="M {dropdown_x + 51} 60 '
+        f'd="M {dropdown_x + 51} 26 '
         f'l 5 5 l 5 -5" '
         'fill="none" '
         'stroke="#9b9b9b" '
