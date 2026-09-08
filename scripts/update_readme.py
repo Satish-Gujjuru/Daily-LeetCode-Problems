@@ -623,6 +623,8 @@ def heat_color(level):
 
 
 def create_heatmap(calendar):
+    import json
+    from datetime import timezone
 
     ASSETS.mkdir(
         parents=True,
@@ -630,56 +632,157 @@ def create_heatmap(calendar):
     )
 
     today = date.today()
-
     start = today - timedelta(days=364)
 
+    # ------------------------------------------------------------
+    # Convert LeetCode submission calendar timestamps to dates
+    # ------------------------------------------------------------
+    def calendar_to_dates(calendar_data):
+        result = {}
+
+        if isinstance(calendar_data, str):
+            try:
+                calendar_data = json.loads(calendar_data)
+            except json.JSONDecodeError:
+                return result
+
+        if not isinstance(calendar_data, dict):
+            return result
+
+        for timestamp, count in calendar_data.items():
+            try:
+                dt = datetime.fromtimestamp(
+                    int(timestamp),
+                    tz=timezone.utc,
+                ).date()
+
+                result[dt] = safe_int(count)
+
+            except (ValueError, TypeError, OverflowError):
+                continue
+
+        return result
+
+    # ------------------------------------------------------------
+    # Current-year data
+    # ------------------------------------------------------------
+    daily_submissions = calendar_to_dates(calendar)
+
+    # ------------------------------------------------------------
+    # Fetch previous-year data
+    #
+    # The normal dashboard query only requests the current year.
+    # A rolling 365-day heatmap can cross the year boundary, so
+    # we fetch the previous year's calendar here.
+    # ------------------------------------------------------------
+    previous_year_query = """
+    query PreviousYearCalendar(
+        $username: String!,
+        $year: Int!
+    ) {
+        matchedUser(username: $username) {
+            userCalendar(year: $year) {
+                submissionCalendar
+            }
+        }
+    }
+    """
+
+    try:
+        previous_data = leetcode_query(
+            previous_year_query,
+            {
+                "username": USERNAME,
+                "year": today.year - 1,
+            },
+        )
+
+        previous_calendar = (
+            previous_data
+            .get("matchedUser", {})
+            .get("userCalendar", {})
+            .get("submissionCalendar", {})
+        )
+
+        previous_dates = calendar_to_dates(
+            previous_calendar
+        )
+
+        # Merge previous year into current year.
+        for day, count in previous_dates.items():
+            if start <= day <= today:
+                daily_submissions[day] = count
+
+    except Exception:
+        # If the previous-year request fails, keep the
+        # current-year data instead of breaking the whole README.
+        pass
+
+    # ------------------------------------------------------------
+    # Build exactly the previous 365 days
+    # ------------------------------------------------------------
     days = []
 
     current = start
 
     while current <= today:
-
-        timestamp = int(
-            datetime(
-                current.year,
-                current.month,
-                current.day,
-            ).timestamp()
-        )
-
-        submissions = calendar.get(
-            timestamp,
-            0,
-        )
-
         days.append(
             (
                 current,
-                submissions,
+                daily_submissions.get(current, 0),
             )
         )
 
         current += timedelta(days=1)
 
+    # ------------------------------------------------------------
+    # Rolling-year statistics
+    # ------------------------------------------------------------
+    total_submissions = sum(
+        count for _, count in days
+    )
+
+    active_days = sum(
+        1
+        for _, count in days
+        if count > 0
+    )
+
+    max_streak = 0
+    current_streak = 0
+
+    for _, count in days:
+        if count > 0:
+            current_streak += 1
+            max_streak = max(
+                max_streak,
+                current_streak,
+            )
+        else:
+            current_streak = 0
+
     maximum = max(
         [count for _, count in days] + [1]
     )
 
-    cell_size = 14
-    gap = 3
+    # ------------------------------------------------------------
+    # LeetCode-style layout
+    # ------------------------------------------------------------
+    cell_size = 13
+    gap = 4
 
-    left = 35
-    top = 30
+    left = 34
+    top = 65
 
-    first_day = days[0][0]
+    first_day = start
 
+    # Sunday = 0, Monday = 1, ..., Saturday = 6
     leading_days = (
         first_day.weekday() + 1
     ) % 7
 
     total_cells = (
-        leading_days
-        + len(days)
+        leading_days + len(days)
     )
 
     weeks = math.ceil(
@@ -690,78 +793,228 @@ def create_heatmap(calendar):
         980,
         left
         + weeks * (cell_size + gap)
-        + 20,
+        + 24,
     )
 
-    height = 175
+    height = 235
 
     svg = []
 
     svg.append(
         f'<svg xmlns="http://www.w3.org/2000/svg" '
-        f'viewBox="0 0 {width} {height}">'
+        f'viewBox="0 0 {width} {height}" '
+        f'width="{width}" height="{height}">'
+    )
+
+    # Card background
+    svg.append(
+        '<rect '
+        f'width="{width}" '
+        f'height="{height}" '
+        'rx="14" '
+        'fill="#1f1f1f"/>'
+    )
+
+    # Subtle border
+    svg.append(
+        '<rect '
+        f'x="0.5" y="0.5" '
+        f'width="{width - 1}" '
+        f'height="{height - 1}" '
+        'rx="14" '
+        'fill="none" '
+        'stroke="#303030"/>'
+    )
+
+    # ------------------------------------------------------------
+    # Header
+    # ------------------------------------------------------------
+
+    header_text = (
+        f"{total_submissions} "
+        "submissions in the past one year"
     )
 
     svg.append(
-        '<rect width="100%" height="100%" '
-        'rx="12" fill="#0d1117"/>'
-    )
-
-    svg.append(
-        '<text x="20" y="20" '
-        'fill="#8b949e" '
-        'font-size="12" '
-        'font-family="Arial">'
-        'LeetCode submission activity'
+        '<text '
+        'x="24" y="30" '
+        'fill="#f0f0f0" '
+        'font-size="17" '
+        'font-family="Arial, Helvetica, sans-serif">'
+        f'<tspan font-weight="700">'
+        f'{total_submissions}'
+        f'</tspan>'
+        f'<tspan> submissions in the past one year</tspan>'
         '</text>'
     )
 
+    # Info icon
+    svg.append(
+        '<circle '
+        'cx="390" cy="25" '
+        'r="8" '
+        'fill="none" '
+        'stroke="#8b8b8b" '
+        'stroke-width="1.4"/>'
+    )
+
+    svg.append(
+        '<text '
+        'x="388" y="29" '
+        'fill="#8b8b8b" '
+        'font-size="10" '
+        'font-family="Arial">'
+        'i'
+        '</text>'
+    )
+
+    # Right-side statistics
+    stats_x = width - 330
+
+    svg.append(
+        f'<text '
+        f'x="{stats_x}" y="30" '
+        'fill="#8b8b8b" '
+        'font-size="13" '
+        'font-family="Arial">'
+        'Total active days: '
+        f'<tspan fill="#f0f0f0" font-weight="700">'
+        f'{active_days}'
+        f'</tspan>'
+        '</text>'
+    )
+
+    svg.append(
+        f'<text '
+        f'x="{stats_x + 150}" y="30" '
+        'fill="#8b8b8b" '
+        'font-size="13" '
+        'font-family="Arial">'
+        'Max streak: '
+        f'<tspan fill="#f0f0f0" font-weight="700">'
+        f'{max_streak}'
+        f'</tspan>'
+        '</text>'
+    )
+
+    # Current dropdown-like control
+    dropdown_x = width - 92
+
+    svg.append(
+        f'<rect '
+        f'x="{dropdown_x}" y="48" '
+        'width="68" height="30" '
+        'rx="6" '
+        'fill="#303030"/>'
+    )
+
+    svg.append(
+        f'<text '
+        f'x="{dropdown_x + 12}" y="68" '
+        'fill="#f0f0f0" '
+        'font-size="12" '
+        'font-family="Arial">'
+        'Current'
+        '</text>'
+    )
+
+    svg.append(
+        f'<path '
+        f'd="M {dropdown_x + 51} 60 '
+        f'l 5 5 l 5 -5" '
+        'fill="none" '
+        'stroke="#9b9b9b" '
+        'stroke-width="1.4"/>'
+    )
+
+    # ------------------------------------------------------------
+    # Month labels
+    # ------------------------------------------------------------
+    month_positions = {}
+
+    for index, (day, _) in enumerate(days):
+        position = leading_days + index
+        column = position // 7
+
+        key = (day.year, day.month)
+
+        if key not in month_positions:
+            month_positions[key] = column
+
+    for (year, month), column in month_positions.items():
+        month_name = datetime(
+            year,
+            month,
+            1,
+        ).strftime("%b")
+
+        x = (
+            left
+            + column * (cell_size + gap)
+        )
+
+        svg.append(
+            f'<text '
+            f'x="{x}" y="201" '
+            'fill="#9b9b9b" '
+            'font-size="11" '
+            'font-family="Arial">'
+            f'{month_name}'
+            '</text>'
+        )
+
+    # ------------------------------------------------------------
+    # Heatmap cells
+    # ------------------------------------------------------------
     for index, (day, count) in enumerate(days):
 
-        position = leading_days + index
+        position = (
+            leading_days + index
+        )
 
         column = position // 7
         row = position % 7
 
         x = (
             left
-            + column
-            * (cell_size + gap)
+            + column * (cell_size + gap)
         )
 
         y = (
             top
-            + row
-            * (cell_size + gap)
+            + row * (cell_size + gap)
         )
 
-        if count == 0:
-
+        if count <= 0:
             level = 0
 
         else:
-
             level = min(
                 4,
-                1
-                + int(
-                    (
+                max(
+                    1,
+                    math.ceil(
                         count
                         / maximum
-                    )
-                    * 3.99
+                        * 4
+                    ),
                 ),
             )
 
-        plural = (
-            "submission"
-            if count == 1
-            else "submissions"
-        )
+        if count == 1:
+            submission_text = "1 submission"
+        else:
+            submission_text = (
+                f"{count} submissions"
+            )
 
+        # Example:
+        # 3 submissions on Sep 1, 2026
         tooltip = (
-            f"{day.isoformat()}: "
-            f"{count} {plural}"
+            f"{submission_text} on "
+            f"{day.strftime('%b')} "
+            f"{day.day}, "
+            f"{day.year}"
         )
 
         svg.append(
@@ -772,13 +1025,20 @@ def create_heatmap(calendar):
             f'height="{cell_size}" '
             f'rx="3" '
             f'fill="{heat_color(level)}">'
-            f'<title>{escape_markdown(tooltip)}</title>'
+            f'<title>{tooltip}</title>'
             f'</rect>'
         )
 
+    # ------------------------------------------------------------
+    # Legend
+    # ------------------------------------------------------------
+    legend_y = 225
+
     svg.append(
-        '<text x="20" y="160" '
-        'fill="#8b949e" '
+        '<text '
+        'x="20" '
+        f'y="{legend_y}" '
+        'fill="#8b8b8b" '
         'font-size="11" '
         'font-family="Arial">'
         'Less'
@@ -787,21 +1047,26 @@ def create_heatmap(calendar):
 
     for level in range(5):
 
-        x = 55 + level * 18
+        x = (
+            53
+            + level * 18
+        )
 
         svg.append(
             f'<rect '
             f'x="{x}" '
-            f'y="150" '
-            f'width="12" '
-            f'height="12" '
-            f'rx="3" '
+            f'y="{legend_y - 11}" '
+            'width="12" '
+            'height="12" '
+            'rx="3" '
             f'fill="{heat_color(level)}"/>'
         )
 
     svg.append(
-        '<text x="155" y="160" '
-        'fill="#8b949e" '
+        '<text '
+        f'x="153" '
+        f'y="{legend_y}" '
+        'fill="#8b8b8b" '
         'font-size="11" '
         'font-family="Arial">'
         'More'
