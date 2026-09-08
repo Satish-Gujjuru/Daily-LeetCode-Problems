@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **65** | **55** | **9** | **1** | **16 days** | **16 days** |
+| **66** | **56** | **9** | **1** | **17 days** | **17 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **65** |
-| 🟢 Easy | 55 / 963 |
+| 🧩 **Problems Solved** | **66** |
+| 🟢 Easy | 56 / 963 |
 | 🟡 Medium | 9 / 2,111 |
 | 🔴 Hard | 1 / 972 |
-| 🎯 Acceptance Rate | **76.4%** |
-| 🔥 Current Streak | **16 days** |
-| 🏆 Longest Streak | **16 days** |
-| 📅 Active Days | **26** |
-| 📁 Problems in Repository | **3** |
+| 🎯 Acceptance Rate | **76.6%** |
+| 🔥 Current Streak | **17 days** |
+| 🏆 Longest Streak | **17 days** |
+| 📅 Active Days | **27** |
+| 📁 Problems in Repository | **4** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 5.7% |
+| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 5.8% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,17 +60,19 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [4245. Count Commas in Range](./4245-count-commas-in-range) | 🟢 Easy | 2026-09-08 |
 | [1406. Subtract the Product and Sum of Digits of an Integer](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 🟢 Easy | 2026-09-07 |
 | [75. Sort Colors](./75-sort-colors) | 🟡 Medium | 2026-09-06 |
 | [4285. Smallest Stable Index II](./4285-smallest-stable-index-ii) | 🟡 Medium | 2026-09-06 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (1)
+### 🟢 Easy (2)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
+| 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
 ### 🟡 Medium (2)
 
@@ -85,25 +87,24 @@
 | Topic | Problems |
 |---|---:|
 | Array | 2 |
+| Math | 2 |
 | Two Pointers | 1 |
 | Sorting | 1 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
-| Math | 1 |
 | Prefix Sum | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 2 |
+| Java | 3 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-09 | 0 |
 | 2026-08-10 | 4 |
 | 2026-08-11 | 3 |
 | 2026-08-12 | 2 |
@@ -133,6 +134,7 @@
 | 2026-09-05 | 3 |
 | 2026-09-06 | 1 |
 | 2026-09-07 | 1 |
+| 2026-09-08 | 1 |
 
 ---
 
@@ -147,6 +149,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 07 Sep 2026, 21:41
+    Last update: 08 Sep 2026, 09:14
   </sub>
 </p>
