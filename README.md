@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **67** | **57** | **9** | **1** | **17 days** | **17 days** |
+| **67** | **57** | **9** | **1** | **18 days** | **18 days** |
 
 ---
 
@@ -33,11 +33,11 @@
 | 🟢 Easy | 57 / 963 |
 | 🟡 Medium | 9 / 2,111 |
 | 🔴 Hard | 1 / 973 |
-| 🎯 Acceptance Rate | **76.9%** |
-| 🔥 Current Streak | **17 days** |
-| 🏆 Longest Streak | **17 days** |
-| 📅 Active Days | **27** |
-| 📁 Problems in Repository | **5** |
+| 🎯 Acceptance Rate | **77.1%** |
+| 🔥 Current Streak | **18 days** |
+| 🏆 Longest Streak | **18 days** |
+| 📅 Active Days | **28** |
+| 📁 Problems in Repository | **6** |
 
 ### Difficulty Progress
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
 | [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
 | [4245. Count Commas in Range](./4245-count-commas-in-range) | 🟢 Easy | 2026-09-08 |
 | [1406. Subtract the Product and Sum of Digits of an Integer](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 🟢 Easy | 2026-09-07 |
@@ -83,32 +84,38 @@
 | 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
 | 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
 
+### 🔴 Hard (1)
+
+| # | Problem | Topics | Solution | Date |
+|---:|---|---|---|---|
+| 154 | **Find Minimum in Rotated Sorted Array II** | Array, Binary Search | [Open](./154-find-minimum-in-rotated-sorted-array-ii) | 2026-09-09 |
+
 
 ## 🧠 Top Topics
 
 | Topic | Problems |
 |---|---:|
-| Array | 3 |
+| Array | 4 |
 | Math | 2 |
 | Two Pointers | 1 |
 | Sorting | 1 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
+| Binary Search | 1 |
 | Prefix Sum | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 4 |
+| Java | 5 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-10 | 4 |
 | 2026-08-11 | 3 |
 | 2026-08-12 | 2 |
 | 2026-08-13 | 0 |
@@ -138,6 +145,7 @@
 | 2026-09-06 | 1 |
 | 2026-09-07 | 1 |
 | 2026-09-08 | 2 |
+| 2026-09-09 | 1 |
 
 ---
 
@@ -152,6 +160,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 08 Sep 2026, 21:18
+    Last update: 09 Sep 2026, 17:19
   </sub>
 </p>
