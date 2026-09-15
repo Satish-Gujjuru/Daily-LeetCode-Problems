@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **67** | **57** | **9** | **1** | **0 days** | **18 days** |
+| **68** | **58** | **9** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **67** |
-| 🟢 Easy | 57 / 965 |
+| 🧩 **Problems Solved** | **68** |
+| 🟢 Easy | 58 / 965 |
 | 🟡 Medium | 9 / 2,115 |
 | 🔴 Hard | 1 / 975 |
-| 🎯 Acceptance Rate | **77.1%** |
-| 🔥 Current Streak | **0 days** |
+| 🎯 Acceptance Rate | **77.3%** |
+| 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **28** |
-| 📁 Problems in Repository | **6** |
+| 📅 Active Days | **29** |
+| 📁 Problems in Repository | **7** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 5.9% |
+| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 6.0% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
 | [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
 | [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
 | [4245. Count Commas in Range](./4245-count-commas-in-range) | 🟢 Easy | 2026-09-08 |
@@ -69,11 +70,12 @@
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (3)
+### 🟢 Easy (4)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
+| 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
@@ -95,7 +97,7 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 4 |
+| Array | 5 |
 | Math | 2 |
 | Two Pointers | 1 |
 | Sorting | 1 |
@@ -103,20 +105,21 @@
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
 | Binary Search | 1 |
+| Hash Table | 1 |
+| Sliding Window | 1 |
 | Prefix Sum | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 5 |
+| Java | 6 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-16 | 0 |
 | 2026-08-17 | 0 |
 | 2026-08-18 | 0 |
 | 2026-08-19 | 0 |
@@ -146,6 +149,7 @@
 | 2026-09-12 | 0 |
 | 2026-09-13 | 0 |
 | 2026-09-14 | 0 |
+| 2026-09-15 | 1 |
 
 ---
 
@@ -160,6 +164,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 14 Sep 2026, 21:56
+    Last update: 15 Sep 2026, 02:38
   </sub>
 </p>
