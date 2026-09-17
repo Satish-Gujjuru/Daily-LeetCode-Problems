@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **68** | **58** | **9** | **1** | **1 days** | **18 days** |
+| **68** | **58** | **9** | **1** | **0 days** | **18 days** |
 
 ---
 
@@ -34,7 +34,7 @@
 | 🟡 Medium | 9 / 2,115 |
 | 🔴 Hard | 1 / 975 |
 | 🎯 Acceptance Rate | **75.9%** |
-| 🔥 Current Streak | **1 days** |
+| 🔥 Current Streak | **0 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **29** |
 | 📁 Problems in Repository | **7** |
@@ -53,7 +53,7 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **685,377** | **78.04%** | **1** |
+| **1,413** | **686,140** | **78.00%** | **1** |
 
 
 ## 🕐 Recently Added
@@ -120,7 +120,6 @@
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-18 | 0 |
 | 2026-08-19 | 0 |
 | 2026-08-20 | 0 |
 | 2026-08-21 | 0 |
@@ -150,6 +149,7 @@
 | 2026-09-14 | 0 |
 | 2026-09-15 | 3 |
 | 2026-09-16 | 0 |
+| 2026-09-17 | 0 |
 
 ---
 
@@ -164,6 +164,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 16 Sep 2026, 21:31
+    Last update: 17 Sep 2026, 21:35
   </sub>
 </p>
