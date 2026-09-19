@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **69** | **59** | **9** | **1** | **1 days** | **18 days** |
+| **70** | **60** | **9** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **69** |
-| 🟢 Easy | 59 / 965 |
+| 🧩 **Problems Solved** | **70** |
+| 🟢 Easy | 60 / 965 |
 | 🟡 Medium | 9 / 2,115 |
 | 🔴 Hard | 1 / 975 |
-| 🎯 Acceptance Rate | **76.1%** |
+| 🎯 Acceptance Rate | **76.3%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **30** |
-| 📁 Problems in Repository | **8** |
+| 📁 Problems in Repository | **9** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 6.1% |
+| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 6.2% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
+| [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
 | [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
 | [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
 | [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
@@ -71,7 +72,7 @@
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (5)
+### 🟢 Easy (6)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -79,6 +80,7 @@
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
+| 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
 ### 🟡 Medium (2)
@@ -99,23 +101,24 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 6 |
+| Array | 7 |
+| Sorting | 3 |
+| Hash Table | 3 |
 | Two Pointers | 2 |
-| Sorting | 2 |
 | Binary Search | 2 |
-| Hash Table | 2 |
 | Math | 2 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
 | Sliding Window | 1 |
+| String | 1 |
 | Prefix Sum | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 7 |
+| Java | 8 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -151,7 +154,7 @@
 | 2026-09-16 | 0 |
 | 2026-09-17 | 0 |
 | 2026-09-18 | 0 |
-| 2026-09-19 | 1 |
+| 2026-09-19 | 2 |
 
 ---
 
@@ -166,6 +169,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 19 Sep 2026, 02:18
+    Last update: 19 Sep 2026, 02:45
   </sub>
 </p>
