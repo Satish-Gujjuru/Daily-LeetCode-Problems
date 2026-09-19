@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **68** | **58** | **9** | **1** | **0 days** | **18 days** |
+| **69** | **59** | **9** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **68** |
-| 🟢 Easy | 58 / 965 |
+| 🧩 **Problems Solved** | **69** |
+| 🟢 Easy | 59 / 965 |
 | 🟡 Medium | 9 / 2,115 |
 | 🔴 Hard | 1 / 975 |
-| 🎯 Acceptance Rate | **75.9%** |
-| 🔥 Current Streak | **0 days** |
+| 🎯 Acceptance Rate | **76.1%** |
+| 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **29** |
-| 📁 Problems in Repository | **7** |
+| 📅 Active Days | **30** |
+| 📁 Problems in Repository | **8** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 6.0% |
+| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 6.1% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
 | [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
 | [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
 | [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
@@ -70,12 +71,13 @@
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (4)
+### 🟢 Easy (5)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
+| 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
@@ -97,15 +99,15 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 5 |
+| Array | 6 |
+| Two Pointers | 2 |
+| Sorting | 2 |
+| Binary Search | 2 |
+| Hash Table | 2 |
 | Math | 2 |
-| Two Pointers | 1 |
-| Sorting | 1 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
-| Binary Search | 1 |
-| Hash Table | 1 |
 | Sliding Window | 1 |
 | Prefix Sum | 1 |
 
@@ -113,14 +115,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 6 |
+| Java | 7 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-20 | 0 |
 | 2026-08-21 | 0 |
 | 2026-08-22 | 0 |
 | 2026-08-23 | 1 |
@@ -150,6 +151,7 @@
 | 2026-09-16 | 0 |
 | 2026-09-17 | 0 |
 | 2026-09-18 | 0 |
+| 2026-09-19 | 1 |
 
 ---
 
@@ -164,6 +166,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 18 Sep 2026, 21:06
+    Last update: 19 Sep 2026, 02:18
   </sub>
 </p>
