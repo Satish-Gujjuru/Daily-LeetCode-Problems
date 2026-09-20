@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **70** | **60** | **9** | **1** | **1 days** | **18 days** |
+| **71** | **61** | **9** | **1** | **2 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **70** |
-| 🟢 Easy | 60 / 965 |
-| 🟡 Medium | 9 / 2,115 |
-| 🔴 Hard | 1 / 975 |
-| 🎯 Acceptance Rate | **76.3%** |
-| 🔥 Current Streak | **1 days** |
+| 🧩 **Problems Solved** | **71** |
+| 🟢 Easy | 61 / 966 |
+| 🟡 Medium | 9 / 2,117 |
+| 🔴 Hard | 1 / 976 |
+| 🎯 Acceptance Rate | **76.5%** |
+| 🔥 Current Streak | **2 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **30** |
-| 📁 Problems in Repository | **9** |
+| 📅 Active Days | **31** |
+| 📁 Problems in Repository | **10** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `█░░░░░░░░░░░░░░░░░░░░░░░` | 6.2% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.3% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
 | [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
 | [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
@@ -72,7 +73,7 @@
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (6)
+### 🟢 Easy (7)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -81,6 +82,7 @@
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
+| 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
 ### 🟡 Medium (2)
@@ -107,25 +109,25 @@
 | Two Pointers | 2 |
 | Binary Search | 2 |
 | Math | 2 |
+| String | 2 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
 | Sliding Window | 1 |
-| String | 1 |
+| Simulation | 1 |
 | Prefix Sum | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 8 |
+| Java | 9 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-21 | 0 |
 | 2026-08-22 | 0 |
 | 2026-08-23 | 1 |
 | 2026-08-24 | 10 |
@@ -155,6 +157,7 @@
 | 2026-09-17 | 0 |
 | 2026-09-18 | 0 |
 | 2026-09-19 | 2 |
+| 2026-09-20 | 1 |
 
 ---
 
@@ -169,6 +172,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 19 Sep 2026, 20:54
+    Last update: 20 Sep 2026, 13:09
   </sub>
 </p>
