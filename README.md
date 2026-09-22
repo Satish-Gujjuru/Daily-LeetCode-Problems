@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **72** | **61** | **10** | **1** | **1 days** | **18 days** |
+| **73** | **62** | **10** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **72** |
-| 🟢 Easy | 61 / 966 |
+| 🧩 **Problems Solved** | **73** |
+| 🟢 Easy | 62 / 966 |
 | 🟡 Medium | 10 / 2,117 |
 | 🔴 Hard | 1 / 976 |
-| 🎯 Acceptance Rate | **76.7%** |
+| 🎯 Acceptance Rate | **75.6%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **32** |
-| 📁 Problems in Repository | **11** |
+| 📁 Problems in Repository | **12** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.3% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.4% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.5% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
 | [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
 | [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
@@ -69,14 +70,14 @@
 | [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
 | [4245. Count Commas in Range](./4245-count-commas-in-range) | 🟢 Easy | 2026-09-08 |
 | [1406. Subtract the Product and Sum of Digits of an Integer](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 🟢 Easy | 2026-09-07 |
-| [75. Sort Colors](./75-sort-colors) | 🟡 Medium | 2026-09-06 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (7)
+### 🟢 Easy (8)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
+| 125 | **Valid Palindrome** | Two Pointers, String | [Open](./125-valid-palindrome) | 2026-09-22 |
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
@@ -105,12 +106,12 @@
 | Topic | Problems |
 |---|---:|
 | Array | 8 |
-| Two Pointers | 3 |
+| Two Pointers | 4 |
 | Sorting | 3 |
+| String | 3 |
 | Binary Search | 3 |
 | Hash Table | 3 |
 | Math | 2 |
-| String | 2 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
@@ -122,7 +123,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 10 |
+| Java | 11 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -158,7 +159,7 @@
 | 2026-09-19 | 2 |
 | 2026-09-20 | 1 |
 | 2026-09-21 | 0 |
-| 2026-09-22 | 1 |
+| 2026-09-22 | 4 |
 
 ---
 
@@ -173,6 +174,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 22 Sep 2026, 09:38
+    Last update: 22 Sep 2026, 11:19
   </sub>
 </p>
