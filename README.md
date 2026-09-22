@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **71** | **61** | **9** | **1** | **2 days** | **18 days** |
+| **72** | **61** | **10** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **71** |
+| 🧩 **Problems Solved** | **72** |
 | 🟢 Easy | 61 / 966 |
-| 🟡 Medium | 9 / 2,117 |
+| 🟡 Medium | 10 / 2,117 |
 | 🔴 Hard | 1 / 976 |
-| 🎯 Acceptance Rate | **76.5%** |
-| 🔥 Current Streak | **2 days** |
+| 🎯 Acceptance Rate | **76.7%** |
+| 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **31** |
-| 📁 Problems in Repository | **10** |
+| 📅 Active Days | **32** |
+| 📁 Problems in Repository | **11** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.3% |
-| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.4% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.5% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
 | [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
 | [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
@@ -69,7 +70,6 @@
 | [4245. Count Commas in Range](./4245-count-commas-in-range) | 🟢 Easy | 2026-09-08 |
 | [1406. Subtract the Product and Sum of Digits of an Integer](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 🟢 Easy | 2026-09-07 |
 | [75. Sort Colors](./75-sort-colors) | 🟡 Medium | 2026-09-06 |
-| [4285. Smallest Stable Index II](./4285-smallest-stable-index-ii) | 🟡 Medium | 2026-09-06 |
 
 ## 🧩 Problems Solved
 
@@ -85,11 +85,12 @@
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
-### 🟡 Medium (2)
+### 🟡 Medium (3)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
+| 167 | **Two Sum II - Input Array Is Sorted** | Array, Two Pointers, Binary Search | [Open](./167-two-sum-ii-input-array-is-sorted) | 2026-09-22 |
 | 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
 
 ### 🔴 Hard (1)
@@ -103,11 +104,11 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 7 |
+| Array | 8 |
+| Two Pointers | 3 |
 | Sorting | 3 |
+| Binary Search | 3 |
 | Hash Table | 3 |
-| Two Pointers | 2 |
-| Binary Search | 2 |
 | Math | 2 |
 | String | 2 |
 | Quicksort | 1 |
@@ -121,14 +122,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 9 |
+| Java | 10 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-23 | 1 |
 | 2026-08-24 | 10 |
 | 2026-08-25 | 5 |
 | 2026-08-26 | 4 |
@@ -158,6 +158,7 @@
 | 2026-09-19 | 2 |
 | 2026-09-20 | 1 |
 | 2026-09-21 | 0 |
+| 2026-09-22 | 1 |
 
 ---
 
@@ -172,6 +173,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 21 Sep 2026, 22:06
+    Last update: 22 Sep 2026, 09:38
   </sub>
 </p>
