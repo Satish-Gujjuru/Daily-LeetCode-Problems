@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **75** | **63** | **11** | **1** | **1 days** | **18 days** |
+| **76** | **63** | **12** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **75** |
+| 🧩 **Problems Solved** | **76** |
 | 🟢 Easy | 63 / 966 |
-| 🟡 Medium | 11 / 2,117 |
+| 🟡 Medium | 12 / 2,117 |
 | 🔴 Hard | 1 / 977 |
-| 🎯 Acceptance Rate | **76.0%** |
+| 🎯 Acceptance Rate | **76.2%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **33** |
-| 📁 Problems in Repository | **14** |
+| 📁 Problems in Repository | **15** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.5% |
-| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.5% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
 | [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
 | [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
 | [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
@@ -69,7 +70,6 @@
 | [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
 | [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
 | [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
-| [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
 
 ## 🧩 Problems Solved
 
@@ -87,11 +87,12 @@
 | 3869 | **Smallest Index With Digit Sum Equal to Index** | Array, Math | [Open](./3869-smallest-index-with-digit-sum-equal-to-index) | 2026-09-24 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
-### 🟡 Medium (4)
+### 🟡 Medium (5)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
+| 137 | **Single Number II** | Array, Bit Manipulation | [Open](./137-single-number-ii) | 2026-09-24 |
 | 167 | **Two Sum II - Input Array Is Sorted** | Array, Two Pointers, Binary Search | [Open](./167-two-sum-ii-input-array-is-sorted) | 2026-09-22 |
 | 260 | **Single Number III** | Array, Bit Manipulation | [Open](./260-single-number-iii) | 2026-09-24 |
 | 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
@@ -107,14 +108,14 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 10 |
+| Array | 11 |
 | Two Pointers | 4 |
 | Sorting | 3 |
 | String | 3 |
+| Bit Manipulation | 3 |
 | Binary Search | 3 |
 | Hash Table | 3 |
 | Math | 3 |
-| Bit Manipulation | 2 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Sliding Window | 1 |
@@ -125,7 +126,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 13 |
+| Java | 14 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -161,7 +162,7 @@
 | 2026-09-21 | 0 |
 | 2026-09-22 | 4 |
 | 2026-09-23 | 0 |
-| 2026-09-24 | 2 |
+| 2026-09-24 | 3 |
 
 ---
 
@@ -176,6 +177,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 24 Sep 2026, 16:14
+    Last update: 24 Sep 2026, 16:42
   </sub>
 </p>
