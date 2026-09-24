@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **77** | **64** | **12** | **1** | **1 days** | **18 days** |
+| **78** | **65** | **12** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **77** |
-| 🟢 Easy | 64 / 966 |
+| 🧩 **Problems Solved** | **78** |
+| 🟢 Easy | 65 / 966 |
 | 🟡 Medium | 12 / 2,117 |
 | 🔴 Hard | 1 / 977 |
-| 🎯 Acceptance Rate | **75.8%** |
+| 🎯 Acceptance Rate | **76.0%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **33** |
-| 📁 Problems in Repository | **16** |
+| 📁 Problems in Repository | **17** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.6% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.7% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
+| [205. Isomorphic Strings](./205-isomorphic-strings) | 🟢 Easy | 2026-09-24 |
 | [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
 | [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
 | [4410. Count Integers Appearing in a Single Block](./4410-count-integers-appearing-in-a-single-block) | 🟢 Easy | 2026-09-24 |
@@ -69,16 +70,16 @@
 | [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
 | [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
-| [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (10)
+### 🟢 Easy (11)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 125 | **Valid Palindrome** | Two Pointers, String | [Open](./125-valid-palindrome) | 2026-09-22 |
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
+| 205 | **Isomorphic Strings** | Hash Table, String | [Open](./205-isomorphic-strings) | 2026-09-24 |
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
@@ -110,10 +111,10 @@
 | Topic | Problems |
 |---|---:|
 | Array | 12 |
+| Hash Table | 5 |
 | Two Pointers | 4 |
-| Hash Table | 4 |
+| String | 4 |
 | Sorting | 3 |
-| String | 3 |
 | Bit Manipulation | 3 |
 | Binary Search | 3 |
 | Math | 3 |
@@ -128,7 +129,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 15 |
+| Java | 16 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -164,7 +165,7 @@
 | 2026-09-21 | 0 |
 | 2026-09-22 | 4 |
 | 2026-09-23 | 0 |
-| 2026-09-24 | 5 |
+| 2026-09-24 | 6 |
 
 ---
 
@@ -179,6 +180,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 24 Sep 2026, 17:30
+    Last update: 24 Sep 2026, 17:47
   </sub>
 </p>
