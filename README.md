@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **76** | **63** | **12** | **1** | **1 days** | **18 days** |
+| **77** | **64** | **12** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **76** |
-| 🟢 Easy | 63 / 966 |
+| 🧩 **Problems Solved** | **77** |
+| 🟢 Easy | 64 / 966 |
 | 🟡 Medium | 12 / 2,117 |
 | 🔴 Hard | 1 / 977 |
-| 🎯 Acceptance Rate | **76.2%** |
+| 🎯 Acceptance Rate | **75.8%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **33** |
-| 📁 Problems in Repository | **15** |
+| 📁 Problems in Repository | **16** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.5% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.6% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -63,17 +63,17 @@
 | [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
 | [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
 | [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
+| [4410. Count Integers Appearing in a Single Block](./4410-count-integers-appearing-in-a-single-block) | 🟢 Easy | 2026-09-24 |
 | [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
 | [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
 | [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
 | [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
 | [219. Contains Duplicate II](./219-contains-duplicate-ii) | 🟢 Easy | 2026-09-15 |
-| [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (9)
+### 🟢 Easy (10)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -86,6 +86,7 @@
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
 | 3869 | **Smallest Index With Digit Sum Equal to Index** | Array, Math | [Open](./3869-smallest-index-with-digit-sum-equal-to-index) | 2026-09-24 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
+| 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
 ### 🟡 Medium (5)
 
@@ -108,25 +109,26 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 11 |
+| Array | 12 |
 | Two Pointers | 4 |
+| Hash Table | 4 |
 | Sorting | 3 |
 | String | 3 |
 | Bit Manipulation | 3 |
 | Binary Search | 3 |
-| Hash Table | 3 |
 | Math | 3 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Sliding Window | 1 |
 | Simulation | 1 |
 | Prefix Sum | 1 |
+| Counting | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 14 |
+| Java | 15 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -162,7 +164,7 @@
 | 2026-09-21 | 0 |
 | 2026-09-22 | 4 |
 | 2026-09-23 | 0 |
-| 2026-09-24 | 3 |
+| 2026-09-24 | 5 |
 
 ---
 
@@ -177,6 +179,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 24 Sep 2026, 16:42
+    Last update: 24 Sep 2026, 17:30
   </sub>
 </p>
