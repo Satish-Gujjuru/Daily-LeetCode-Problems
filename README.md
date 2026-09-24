@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **73** | **62** | **10** | **1** | **1 days** | **18 days** |
+| **74** | **63** | **10** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **73** |
-| 🟢 Easy | 62 / 966 |
+| 🧩 **Problems Solved** | **74** |
+| 🟢 Easy | 63 / 966 |
 | 🟡 Medium | 10 / 2,117 |
 | 🔴 Hard | 1 / 977 |
-| 🎯 Acceptance Rate | **75.6%** |
+| 🎯 Acceptance Rate | **75.8%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **32** |
-| 📁 Problems in Repository | **12** |
+| 📅 Active Days | **33** |
+| 📁 Problems in Repository | **13** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.4% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.5% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.5% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
 | [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
 | [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
 | [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
@@ -69,11 +70,10 @@
 | [154. Find Minimum in Rotated Sorted Array II](./154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | 2026-09-09 |
 | [136. Single Number](./136-single-number) | 🟢 Easy | 2026-09-08 |
 | [4245. Count Commas in Range](./4245-count-commas-in-range) | 🟢 Easy | 2026-09-08 |
-| [1406. Subtract the Product and Sum of Digits of an Integer](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 🟢 Easy | 2026-09-07 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (8)
+### 🟢 Easy (9)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -84,6 +84,7 @@
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
+| 3869 | **Smallest Index With Digit Sum Equal to Index** | Array, Math | [Open](./3869-smallest-index-with-digit-sum-equal-to-index) | 2026-09-24 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 
 ### 🟡 Medium (3)
@@ -105,13 +106,13 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 8 |
+| Array | 9 |
 | Two Pointers | 4 |
 | Sorting | 3 |
 | String | 3 |
 | Binary Search | 3 |
 | Hash Table | 3 |
-| Math | 2 |
+| Math | 3 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Bit Manipulation | 1 |
@@ -123,14 +124,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 11 |
+| Java | 12 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-25 | 5 |
 | 2026-08-26 | 4 |
 | 2026-08-27 | 1 |
 | 2026-08-28 | 5 |
@@ -160,6 +160,7 @@
 | 2026-09-21 | 0 |
 | 2026-09-22 | 4 |
 | 2026-09-23 | 0 |
+| 2026-09-24 | 1 |
 
 ---
 
@@ -174,6 +175,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 23 Sep 2026, 21:39
+    Last update: 24 Sep 2026, 15:43
   </sub>
 </p>
