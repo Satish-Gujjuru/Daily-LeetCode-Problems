@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **78** | **65** | **12** | **1** | **1 days** | **18 days** |
+| **79** | **65** | **13** | **1** | **2 days** | **18 days** |
 
 ---
 
@@ -29,15 +29,15 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **78** |
+| 🧩 **Problems Solved** | **79** |
 | 🟢 Easy | 65 / 966 |
-| 🟡 Medium | 12 / 2,117 |
+| 🟡 Medium | 13 / 2,117 |
 | 🔴 Hard | 1 / 977 |
-| 🎯 Acceptance Rate | **76.0%** |
-| 🔥 Current Streak | **1 days** |
+| 🎯 Acceptance Rate | **76.2%** |
+| 🔥 Current Streak | **2 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **33** |
-| 📁 Problems in Repository | **17** |
+| 📅 Active Days | **34** |
+| 📁 Problems in Repository | **18** |
 
 ### Difficulty Progress
 
@@ -53,13 +53,14 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **686,140** | **78.00%** | **1** |
+| **1,413** | **686,706** | **77.98%** | **1** |
 
 
 ## 🕐 Recently Added
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [882. Peak Index in a Mountain Array](./882-peak-index-in-a-mountain-array) | 🟡 Medium | 2026-09-25 |
 | [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
 | [205. Isomorphic Strings](./205-isomorphic-strings) | 🟢 Easy | 2026-09-24 |
 | [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
@@ -69,7 +70,6 @@
 | [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
 | [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 | [350. Intersection of Two Arrays II](./350-intersection-of-two-arrays-ii) | 🟢 Easy | 2026-09-19 |
-| [2502. Sort the People](./2502-sort-the-people) | 🟢 Easy | 2026-09-19 |
 
 ## 🧩 Problems Solved
 
@@ -89,7 +89,7 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (5)
+### 🟡 Medium (6)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -97,6 +97,7 @@
 | 137 | **Single Number II** | Array, Bit Manipulation | [Open](./137-single-number-ii) | 2026-09-24 |
 | 167 | **Two Sum II - Input Array Is Sorted** | Array, Two Pointers, Binary Search | [Open](./167-two-sum-ii-input-array-is-sorted) | 2026-09-22 |
 | 260 | **Single Number III** | Array, Bit Manipulation | [Open](./260-single-number-iii) | 2026-09-24 |
+| 882 | **Peak Index in a Mountain Array** | Array, Binary Search, Ternary Search | [Open](./882-peak-index-in-a-mountain-array) | 2026-09-25 |
 | 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
 
 ### 🔴 Hard (1)
@@ -110,17 +111,18 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 12 |
+| Array | 13 |
 | Hash Table | 5 |
 | Two Pointers | 4 |
 | String | 4 |
+| Binary Search | 4 |
 | Sorting | 3 |
 | Bit Manipulation | 3 |
-| Binary Search | 3 |
 | Math | 3 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Sliding Window | 1 |
+| Ternary Search | 1 |
 | Simulation | 1 |
 | Prefix Sum | 1 |
 | Counting | 1 |
@@ -129,14 +131,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 16 |
+| Java | 17 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-26 | 4 |
 | 2026-08-27 | 1 |
 | 2026-08-28 | 5 |
 | 2026-08-29 | 5 |
@@ -166,6 +167,7 @@
 | 2026-09-22 | 4 |
 | 2026-09-23 | 0 |
 | 2026-09-24 | 6 |
+| 2026-09-25 | 1 |
 
 ---
 
@@ -180,6 +182,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 24 Sep 2026, 21:40
+    Last update: 25 Sep 2026, 13:59
   </sub>
 </p>
