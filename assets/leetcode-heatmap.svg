@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 235" width="980" height="235">
 <rect width="980" height="235" rx="14" fill="#1f1f1f"/>
 <rect x="0.5" y="0.5" width="979" height="234" rx="14" fill="none" stroke="#303030"/>
-<text x="24" y="30" fill="#f0f0f0" font-size="17" font-family="Arial, Helvetica, sans-serif"><tspan font-weight="700">111</tspan><tspan> submissions in the past one year</tspan></text>
+<text x="24" y="30" fill="#f0f0f0" font-size="17" font-family="Arial, Helvetica, sans-serif"><tspan font-weight="700">112</tspan><tspan> submissions in the past one year</tspan></text>
 <circle cx="390" cy="25" r="8" fill="none" stroke="#8b8b8b" stroke-width="1.4"/>
 <text x="388" y="29" fill="#8b8b8b" font-size="10" font-family="Arial">i</text>
-<text x="650" y="30" fill="#8b8b8b" font-size="13" font-family="Arial">Total active days: <tspan fill="#f0f0f0" font-weight="700">34</tspan></text>
+<text x="650" y="30" fill="#8b8b8b" font-size="13" font-family="Arial">Total active days: <tspan fill="#f0f0f0" font-weight="700">35</tspan></text>
 <text x="800" y="30" fill="#8b8b8b" font-size="13" font-family="Arial">Max streak: <tspan fill="#f0f0f0" font-weight="700">18</tspan></text>
 <rect x="888" y="14" width="68" height="30" rx="6" fill="#303030"/>
 <text x="900" y="34" fill="#f0f0f0" font-size="12" font-family="Arial">Current</text>
@@ -22,7 +22,6 @@
 <text x="714" y="201" fill="#9b9b9b" font-size="11" font-family="Arial">Jul</text>
 <text x="782" y="201" fill="#9b9b9b" font-size="11" font-family="Arial">Aug</text>
 <text x="867" y="201" fill="#9b9b9b" font-size="11" font-family="Arial">Sep</text>
-<rect x="34" y="150" width="13" height="13" rx="3" fill="#161b22"><title>0 submissions on Sep 26, 2025</title></rect>
 <rect x="34" y="167" width="13" height="13" rx="3" fill="#161b22"><title>0 submissions on Sep 27, 2025</title></rect>
 <rect x="51" y="65" width="13" height="13" rx="3" fill="#161b22"><title>0 submissions on Sep 28, 2025</title></rect>
 <rect x="51" y="82" width="13" height="13" rx="3" fill="#161b22"><title>0 submissions on Sep 29, 2025</title></rect>
@@ -387,6 +386,7 @@
 <rect x="918" y="116" width="13" height="13" rx="3" fill="#161b22"><title>0 submissions on Sep 23, 2026</title></rect>
 <rect x="918" y="133" width="13" height="13" rx="3" fill="#26a641"><title>6 submissions on Sep 24, 2026</title></rect>
 <rect x="918" y="150" width="13" height="13" rx="3" fill="#0e4429"><title>1 submission on Sep 25, 2026</title></rect>
+<rect x="918" y="167" width="13" height="13" rx="3" fill="#0e4429"><title>1 submission on Sep 26, 2026</title></rect>
 <text x="20" y="225" fill="#8b8b8b" font-size="11" font-family="Arial">Less</text>
 <rect x="53" y="214" width="12" height="12" rx="3" fill="#161b22"/>
 <rect x="71" y="214" width="12" height="12" rx="3" fill="#0e4429"/>
