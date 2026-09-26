@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **80** | **66** | **13** | **1** | **3 days** | **18 days** |
+| **81** | **67** | **13** | **1** | **3 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **80** |
-| 🟢 Easy | 66 / 967 |
+| 🧩 **Problems Solved** | **81** |
+| 🟢 Easy | 67 / 967 |
 | 🟡 Medium | 13 / 2,119 |
 | 🔴 Hard | 1 / 978 |
-| 🎯 Acceptance Rate | **76.4%** |
+| 🎯 Acceptance Rate | **76.6%** |
 | 🔥 Current Streak | **3 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **35** |
-| 📁 Problems in Repository | **19** |
+| 📁 Problems in Repository | **20** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.8% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.9% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
 | [2427. First Letter to Appear Twice](./2427-first-letter-to-appear-twice) | 🟢 Easy | 2026-09-27 |
 | [882. Peak Index in a Mountain Array](./882-peak-index-in-a-mountain-array) | 🟡 Medium | 2026-09-25 |
 | [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
@@ -69,11 +70,10 @@
 | [4410. Count Integers Appearing in a Single Block](./4410-count-integers-appearing-in-a-single-block) | 🟢 Easy | 2026-09-24 |
 | [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
 | [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
-| [3811. Reverse Degree of a String](./3811-reverse-degree-of-a-string) | 🟢 Easy | 2026-09-20 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (12)
+### 🟢 Easy (13)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -83,6 +83,7 @@
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
+| 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
@@ -115,11 +116,11 @@
 | Array | 13 |
 | Hash Table | 6 |
 | String | 5 |
+| Bit Manipulation | 5 |
 | Two Pointers | 4 |
-| Bit Manipulation | 4 |
 | Binary Search | 4 |
+| Math | 4 |
 | Sorting | 3 |
-| Math | 3 |
 | Counting | 2 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
@@ -132,7 +133,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 18 |
+| Java | 19 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -168,7 +169,7 @@
 | 2026-09-23 | 0 |
 | 2026-09-24 | 6 |
 | 2026-09-25 | 1 |
-| 2026-09-26 | 1 |
+| 2026-09-26 | 2 |
 
 ---
 
@@ -183,6 +184,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 26 Sep 2026, 19:21
+    Last update: 26 Sep 2026, 19:34
   </sub>
 </p>
