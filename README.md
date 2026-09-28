@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **86** | **72** | **13** | **1** | **1 days** | **18 days** |
+| **87** | **73** | **13** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **86** |
-| 🟢 Easy | 72 / 968 |
+| 🧩 **Problems Solved** | **87** |
+| 🟢 Easy | 73 / 968 |
 | 🟡 Medium | 13 / 2,121 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **76.3%** |
+| 🎯 Acceptance Rate | **76.5%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **36** |
-| 📁 Problems in Repository | **24** |
+| 📁 Problems in Repository | **25** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.4% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.5% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [66. Plus One](./66-plus-one) | 🟢 Easy | 2026-09-28 |
 | [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
 | [1833. Find the Highest Altitude](./1833-find-the-highest-altitude) | 🟢 Easy | 2026-09-28 |
 | [1950. Sign of the Product of an Array](./1950-sign-of-the-product-of-an-array) | 🟢 Easy | 2026-09-28 |
@@ -69,14 +70,14 @@
 | [882. Peak Index in a Mountain Array](./882-peak-index-in-a-mountain-array) | 🟡 Medium | 2026-09-25 |
 | [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
 | [205. Isomorphic Strings](./205-isomorphic-strings) | 🟢 Easy | 2026-09-24 |
-| [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (17)
+### 🟢 Easy (18)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
+| 66 | **Plus One** | Array, Math | [Open](./66-plus-one) | 2026-09-28 |
 | 125 | **Valid Palindrome** | Two Pointers, String | [Open](./125-valid-palindrome) | 2026-09-22 |
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
 | 205 | **Isomorphic Strings** | Hash Table, String | [Open](./205-isomorphic-strings) | 2026-09-24 |
@@ -117,10 +118,10 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 16 |
+| Array | 17 |
+| Math | 7 |
 | Hash Table | 7 |
 | String | 6 |
-| Math | 6 |
 | Bit Manipulation | 5 |
 | Two Pointers | 4 |
 | Sorting | 4 |
@@ -137,7 +138,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 22 |
+| Java | 23 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -173,7 +174,7 @@
 | 2026-09-25 | 1 |
 | 2026-09-26 | 2 |
 | 2026-09-27 | 0 |
-| 2026-09-28 | 7 |
+| 2026-09-28 | 8 |
 
 ---
 
@@ -188,6 +189,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 28 Sep 2026, 11:49
+    Last update: 28 Sep 2026, 14:08
   </sub>
 </p>
