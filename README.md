@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **82** | **68** | **13** | **1** | **1 days** | **18 days** |
+| **83** | **69** | **13** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **82** |
-| 🟢 Easy | 68 / 968 |
+| 🧩 **Problems Solved** | **83** |
+| 🟢 Easy | 69 / 968 |
 | 🟡 Medium | 13 / 2,121 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **76.7%** |
+| 🎯 Acceptance Rate | **76.9%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **36** |
-| 📁 Problems in Repository | **21** |
+| 📁 Problems in Repository | **22** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.0% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.1% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
+| [3321. Type of Triangle](./3321-type-of-triangle) | 🟢 Easy | 2026-09-28 |
 | [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
 | [2427. First Letter to Appear Twice](./2427-first-letter-to-appear-twice) | 🟢 Easy | 2026-09-27 |
 | [882. Peak Index in a Mountain Array](./882-peak-index-in-a-mountain-array) | 🟡 Medium | 2026-09-25 |
@@ -69,11 +70,10 @@
 | [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
 | [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
 | [4410. Count Integers Appearing in a Single Block](./4410-count-integers-appearing-in-a-single-block) | 🟢 Easy | 2026-09-24 |
-| [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (14)
+### 🟢 Easy (15)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -87,6 +87,7 @@
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
+| 3321 | **Type of Triangle** | Array, Math, Sorting, Polygons | [Open](./3321-type-of-triangle) | 2026-09-28 |
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
 | 3869 | **Smallest Index With Digit Sum Equal to Index** | Array, Math | [Open](./3869-smallest-index-with-digit-sum-equal-to-index) | 2026-09-24 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
@@ -114,27 +115,27 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 13 |
+| Array | 14 |
 | Hash Table | 7 |
 | String | 6 |
 | Bit Manipulation | 5 |
+| Math | 5 |
 | Two Pointers | 4 |
+| Sorting | 4 |
 | Binary Search | 4 |
-| Math | 4 |
-| Sorting | 3 |
 | Counting | 3 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Sliding Window | 1 |
 | Queue | 1 |
 | Ternary Search | 1 |
-| Simulation | 1 |
+| Polygons | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 20 |
+| Java | 21 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -170,7 +171,7 @@
 | 2026-09-25 | 1 |
 | 2026-09-26 | 2 |
 | 2026-09-27 | 0 |
-| 2026-09-28 | 1 |
+| 2026-09-28 | 2 |
 
 ---
 
@@ -185,6 +186,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 28 Sep 2026, 09:24
+    Last update: 28 Sep 2026, 09:39
   </sub>
 </p>
