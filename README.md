@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **85** | **71** | **13** | **1** | **1 days** | **18 days** |
+| **86** | **72** | **13** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **85** |
-| 🟢 Easy | 71 / 968 |
+| 🧩 **Problems Solved** | **86** |
+| 🟢 Easy | 72 / 968 |
 | 🟡 Medium | 13 / 2,121 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **77.3%** |
+| 🎯 Acceptance Rate | **76.3%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **36** |
-| 📁 Problems in Repository | **23** |
+| 📁 Problems in Repository | **24** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.3% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.4% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -62,6 +62,7 @@
 |---|---|---|
 | [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
 | [1833. Find the Highest Altitude](./1833-find-the-highest-altitude) | 🟢 Easy | 2026-09-28 |
+| [1950. Sign of the Product of an Array](./1950-sign-of-the-product-of-an-array) | 🟢 Easy | 2026-09-28 |
 | [3321. Type of Triangle](./3321-type-of-triangle) | 🟢 Easy | 2026-09-28 |
 | [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
 | [2427. First Letter to Appear Twice](./2427-first-letter-to-appear-twice) | 🟢 Easy | 2026-09-27 |
@@ -69,11 +70,10 @@
 | [137. Single Number II](./137-single-number-ii) | 🟡 Medium | 2026-09-24 |
 | [205. Isomorphic Strings](./205-isomorphic-strings) | 🟢 Easy | 2026-09-24 |
 | [260. Single Number III](./260-single-number-iii) | 🟡 Medium | 2026-09-24 |
-| [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (16)
+### 🟢 Easy (17)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -86,6 +86,7 @@
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 1833 | **Find the Highest Altitude** | Array, Prefix Sum | [Open](./1833-find-the-highest-altitude) | 2026-09-28 |
+| 1950 | **Sign of the Product of an Array** | Array, Math | [Open](./1950-sign-of-the-product-of-an-array) | 2026-09-28 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
 | 3321 | **Type of Triangle** | Array, Math, Sorting, Polygons | [Open](./3321-type-of-triangle) | 2026-09-28 |
@@ -116,11 +117,11 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 15 |
+| Array | 16 |
 | Hash Table | 7 |
 | String | 6 |
+| Math | 6 |
 | Bit Manipulation | 5 |
-| Math | 5 |
 | Two Pointers | 4 |
 | Sorting | 4 |
 | Binary Search | 4 |
@@ -136,7 +137,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 21 |
+| Java | 22 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -172,7 +173,7 @@
 | 2026-09-25 | 1 |
 | 2026-09-26 | 2 |
 | 2026-09-27 | 0 |
-| 2026-09-28 | 4 |
+| 2026-09-28 | 7 |
 
 ---
 
@@ -187,6 +188,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 28 Sep 2026, 09:54
+    Last update: 28 Sep 2026, 11:49
   </sub>
 </p>
