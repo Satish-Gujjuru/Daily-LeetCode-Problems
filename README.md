@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **81** | **67** | **13** | **1** | **3 days** | **18 days** |
+| **82** | **68** | **13** | **1** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **81** |
-| 🟢 Easy | 67 / 968 |
+| 🧩 **Problems Solved** | **82** |
+| 🟢 Easy | 68 / 968 |
 | 🟡 Medium | 13 / 2,121 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **76.6%** |
-| 🔥 Current Streak | **3 days** |
+| 🎯 Acceptance Rate | **76.7%** |
+| 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **35** |
-| 📁 Problems in Repository | **20** |
+| 📅 Active Days | **36** |
+| 📁 Problems in Repository | **21** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 6.9% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.0% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.6% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
 | [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
 | [2427. First Letter to Appear Twice](./2427-first-letter-to-appear-twice) | 🟢 Easy | 2026-09-27 |
 | [882. Peak Index in a Mountain Array](./882-peak-index-in-a-mountain-array) | 🟡 Medium | 2026-09-25 |
@@ -69,11 +70,10 @@
 | [3869. Smallest Index With Digit Sum Equal to Index](./3869-smallest-index-with-digit-sum-equal-to-index) | 🟢 Easy | 2026-09-24 |
 | [4410. Count Integers Appearing in a Single Block](./4410-count-integers-appearing-in-a-single-block) | 🟢 Easy | 2026-09-24 |
 | [125. Valid Palindrome](./125-valid-palindrome) | 🟢 Easy | 2026-09-22 |
-| [167. Two Sum II - Input Array Is Sorted](./167-two-sum-ii-input-array-is-sorted) | 🟡 Medium | 2026-09-22 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (13)
+### 🟢 Easy (14)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -82,6 +82,7 @@
 | 205 | **Isomorphic Strings** | Hash Table, String | [Open](./205-isomorphic-strings) | 2026-09-24 |
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
+| 387 | **First Unique Character in a String** | Hash Table, String, Queue, Counting | [Open](./387-first-unique-character-in-a-string) | 2026-09-28 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
@@ -114,33 +115,32 @@
 | Topic | Problems |
 |---|---:|
 | Array | 13 |
-| Hash Table | 6 |
-| String | 5 |
+| Hash Table | 7 |
+| String | 6 |
 | Bit Manipulation | 5 |
 | Two Pointers | 4 |
 | Binary Search | 4 |
 | Math | 4 |
 | Sorting | 3 |
-| Counting | 2 |
+| Counting | 3 |
 | Quicksort | 1 |
 | Bubble Sort | 1 |
 | Sliding Window | 1 |
+| Queue | 1 |
 | Ternary Search | 1 |
 | Simulation | 1 |
-| Prefix Sum | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 19 |
+| Java | 20 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-08-29 | 5 |
 | 2026-08-30 | 2 |
 | 2026-08-31 | 11 |
 | 2026-09-01 | 3 |
@@ -170,6 +170,7 @@
 | 2026-09-25 | 1 |
 | 2026-09-26 | 2 |
 | 2026-09-27 | 0 |
+| 2026-09-28 | 1 |
 
 ---
 
@@ -184,6 +185,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 27 Sep 2026, 21:30
+    Last update: 28 Sep 2026, 09:24
   </sub>
 </p>
