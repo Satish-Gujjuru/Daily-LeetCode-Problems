@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **89** | **74** | **14** | **1** | **3 days** | **18 days** |
+| **90** | **75** | **14** | **1** | **4 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **89** |
-| 🟢 Easy | 74 / 968 |
+| 🧩 **Problems Solved** | **90** |
+| 🟢 Easy | 75 / 968 |
 | 🟡 Medium | 14 / 2,122 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **76.3%** |
-| 🔥 Current Streak | **3 days** |
+| 🎯 Acceptance Rate | **76.4%** |
+| 🔥 Current Streak | **4 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **38** |
-| 📁 Problems in Repository | **27** |
+| 📅 Active Days | **39** |
+| 📁 Problems in Repository | **28** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.6% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.7% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.7% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -53,13 +53,14 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **686,706** | **77.98%** | **1** |
+| **1,413** | **687,720** | **77.95%** | **1** |
 
 
 ## 🕐 Recently Added
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
 | [389. Find the Difference](./389-find-the-difference) | 🟢 Easy | 2026-09-30 |
 | [53. Maximum Subarray](./53-maximum-subarray) | 🟡 Medium | 2026-09-29 |
 | [66. Plus One](./66-plus-one) | 🟢 Easy | 2026-09-28 |
@@ -69,14 +70,14 @@
 | [3321. Type of Triangle](./3321-type-of-triangle) | 🟢 Easy | 2026-09-28 |
 | [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
 | [2427. First Letter to Appear Twice](./2427-first-letter-to-appear-twice) | 🟢 Easy | 2026-09-27 |
-| [882. Peak Index in a Mountain Array](./882-peak-index-in-a-mountain-array) | 🟡 Medium | 2026-09-25 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (19)
+### 🟢 Easy (20)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
+| 20 | **Valid Parentheses** | String, Stack, Bracket Sequences | [Open](./20-valid-parentheses) | 2026-10-02 |
 | 66 | **Plus One** | Array, Math | [Open](./66-plus-one) | 2026-09-28 |
 | 125 | **Valid Palindrome** | Two Pointers, String | [Open](./125-valid-palindrome) | 2026-09-22 |
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
@@ -121,33 +122,32 @@
 | Topic | Problems |
 |---|---:|
 | Array | 18 |
+| String | 8 |
 | Hash Table | 8 |
 | Math | 7 |
-| String | 7 |
 | Bit Manipulation | 6 |
 | Sorting | 5 |
 | Two Pointers | 4 |
 | Binary Search | 4 |
 | Counting | 3 |
 | Prefix Sum | 2 |
+| Stack | 1 |
+| Bracket Sequences | 1 |
 | Divide and Conquer | 1 |
 | Dynamic Programming | 1 |
 | Quicksort | 1 |
-| Bubble Sort | 1 |
-| Sliding Window | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 25 |
+| Java | 26 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-01 | 3 |
 | 2026-09-02 | 3 |
 | 2026-09-03 | 6 |
 | 2026-09-04 | 2 |
@@ -177,6 +177,7 @@
 | 2026-09-28 | 8 |
 | 2026-09-29 | 2 |
 | 2026-09-30 | 1 |
+| 2026-10-01 | 1 |
 
 ---
 
@@ -191,6 +192,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 30 Sep 2026, 22:28
+    Last update: 01 Oct 2026, 18:56
   </sub>
 </p>
