@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **90** | **75** | **14** | **1** | **4 days** | **18 days** |
+| **91** | **76** | **14** | **1** | **5 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **90** |
-| 🟢 Easy | 75 / 968 |
+| 🧩 **Problems Solved** | **91** |
+| 🟢 Easy | 76 / 968 |
 | 🟡 Medium | 14 / 2,122 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **76.4%** |
-| 🔥 Current Streak | **4 days** |
+| 🎯 Acceptance Rate | **76.1%** |
+| 🔥 Current Streak | **5 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **39** |
-| 📁 Problems in Repository | **28** |
+| 📅 Active Days | **40** |
+| 📁 Problems in Repository | **29** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.7% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.9% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.7% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
+| [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
 | [389. Find the Difference](./389-find-the-difference) | 🟢 Easy | 2026-09-30 |
 | [53. Maximum Subarray](./53-maximum-subarray) | 🟡 Medium | 2026-09-29 |
 | [66. Plus One](./66-plus-one) | 🟢 Easy | 2026-09-28 |
@@ -69,11 +70,10 @@
 | [1950. Sign of the Product of an Array](./1950-sign-of-the-product-of-an-array) | 🟢 Easy | 2026-09-28 |
 | [3321. Type of Triangle](./3321-type-of-triangle) | 🟢 Easy | 2026-09-28 |
 | [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
-| [2427. First Letter to Appear Twice](./2427-first-letter-to-appear-twice) | 🟢 Easy | 2026-09-27 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (20)
+### 🟢 Easy (21)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -86,6 +86,7 @@
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 387 | **First Unique Character in a String** | Hash Table, String, Queue, Counting | [Open](./387-first-unique-character-in-a-string) | 2026-09-28 |
 | 389 | **Find the Difference** | Hash Table, String, Bit Manipulation, Sorting | [Open](./389-find-the-difference) | 2026-09-30 |
+| 414 | **Third Maximum Number** | Array, Sorting | [Open](./414-third-maximum-number) | 2026-10-02 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 1833 | **Find the Highest Altitude** | Array, Prefix Sum | [Open](./1833-find-the-highest-altitude) | 2026-09-28 |
@@ -121,12 +122,12 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 18 |
+| Array | 19 |
 | String | 8 |
 | Hash Table | 8 |
 | Math | 7 |
+| Sorting | 6 |
 | Bit Manipulation | 6 |
-| Sorting | 5 |
 | Two Pointers | 4 |
 | Binary Search | 4 |
 | Counting | 3 |
@@ -141,14 +142,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 26 |
+| Java | 27 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-02 | 3 |
 | 2026-09-03 | 6 |
 | 2026-09-04 | 2 |
 | 2026-09-05 | 3 |
@@ -178,6 +178,7 @@
 | 2026-09-29 | 2 |
 | 2026-09-30 | 1 |
 | 2026-10-01 | 1 |
+| 2026-10-02 | 2 |
 
 ---
 
@@ -192,6 +193,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 01 Oct 2026, 22:49
+    Last update: 02 Oct 2026, 15:11
   </sub>
 </p>
