@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **91** | **76** | **14** | **1** | **5 days** | **18 days** |
+| **92** | **76** | **15** | **1** | **5 days** | **18 days** |
 
 ---
 
@@ -29,15 +29,15 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **91** |
+| 🧩 **Problems Solved** | **92** |
 | 🟢 Easy | 76 / 968 |
-| 🟡 Medium | 14 / 2,122 |
+| 🟡 Medium | 15 / 2,122 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **76.1%** |
+| 🎯 Acceptance Rate | **75.7%** |
 | 🔥 Current Streak | **5 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **40** |
-| 📁 Problems in Repository | **29** |
+| 📁 Problems in Repository | **30** |
 
 ### Difficulty Progress
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
+| [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
 | [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
 | [389. Find the Difference](./389-find-the-difference) | 🟢 Easy | 2026-09-30 |
 | [53. Maximum Subarray](./53-maximum-subarray) | 🟡 Medium | 2026-09-29 |
@@ -69,7 +70,6 @@
 | [1833. Find the Highest Altitude](./1833-find-the-highest-altitude) | 🟢 Easy | 2026-09-28 |
 | [1950. Sign of the Product of an Array](./1950-sign-of-the-product-of-an-array) | 🟢 Easy | 2026-09-28 |
 | [3321. Type of Triangle](./3321-type-of-triangle) | 🟢 Easy | 2026-09-28 |
-| [1444. Number of Steps to Reduce a Number to Zero](./1444-number-of-steps-to-reduce-a-number-to-zero) | 🟢 Easy | 2026-09-27 |
 
 ## 🧩 Problems Solved
 
@@ -99,10 +99,11 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (7)
+### 🟡 Medium (8)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
+| 33 | **Search in Rotated Sorted Array** | Array, Binary Search | [Open](./33-search-in-rotated-sorted-array) | 2026-10-02 |
 | 53 | **Maximum Subarray** | Array, Divide and Conquer, Dynamic Programming | [Open](./53-maximum-subarray) | 2026-09-29 |
 | 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
 | 137 | **Single Number II** | Array, Bit Manipulation | [Open](./137-single-number-ii) | 2026-09-24 |
@@ -122,14 +123,14 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 19 |
+| Array | 20 |
 | String | 8 |
 | Hash Table | 8 |
 | Math | 7 |
 | Sorting | 6 |
 | Bit Manipulation | 6 |
+| Binary Search | 5 |
 | Two Pointers | 4 |
-| Binary Search | 4 |
 | Counting | 3 |
 | Prefix Sum | 2 |
 | Stack | 1 |
@@ -142,7 +143,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 27 |
+| Java | 28 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -178,7 +179,7 @@
 | 2026-09-29 | 2 |
 | 2026-09-30 | 1 |
 | 2026-10-01 | 1 |
-| 2026-10-02 | 2 |
+| 2026-10-02 | 4 |
 
 ---
 
@@ -193,6 +194,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 02 Oct 2026, 15:11
+    Last update: 02 Oct 2026, 17:01
   </sub>
 </p>
