@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **92** | **76** | **15** | **1** | **5 days** | **18 days** |
+| **93** | **76** | **16** | **1** | **6 days** | **18 days** |
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **92** |
+| 🧩 **Problems Solved** | **93** |
 | 🟢 Easy | 76 / 968 |
-| 🟡 Medium | 15 / 2,122 |
+| 🟡 Medium | 16 / 2,122 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **75.7%** |
-| 🔥 Current Streak | **5 days** |
+| 🎯 Acceptance Rate | **75.9%** |
+| 🔥 Current Streak | **6 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **40** |
-| 📁 Problems in Repository | **30** |
+| 📅 Active Days | **41** |
+| 📁 Problems in Repository | **31** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.9% |
-| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.7% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.8% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
 | [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
 | [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
@@ -69,7 +70,6 @@
 | [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
 | [1833. Find the Highest Altitude](./1833-find-the-highest-altitude) | 🟢 Easy | 2026-09-28 |
 | [1950. Sign of the Product of an Array](./1950-sign-of-the-product-of-an-array) | 🟢 Easy | 2026-09-28 |
-| [3321. Type of Triangle](./3321-type-of-triangle) | 🟢 Easy | 2026-09-28 |
 
 ## 🧩 Problems Solved
 
@@ -99,11 +99,12 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (8)
+### 🟡 Medium (9)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 33 | **Search in Rotated Sorted Array** | Array, Binary Search | [Open](./33-search-in-rotated-sorted-array) | 2026-10-02 |
+| 50 | **Pow(x, n)** | Math, Recursion | [Open](./50-powx-n) | 2026-10-03 |
 | 53 | **Maximum Subarray** | Array, Divide and Conquer, Dynamic Programming | [Open](./53-maximum-subarray) | 2026-09-29 |
 | 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
 | 137 | **Single Number II** | Array, Bit Manipulation | [Open](./137-single-number-ii) | 2026-09-24 |
@@ -125,8 +126,8 @@
 |---|---:|
 | Array | 20 |
 | String | 8 |
+| Math | 8 |
 | Hash Table | 8 |
-| Math | 7 |
 | Sorting | 6 |
 | Bit Manipulation | 6 |
 | Binary Search | 5 |
@@ -135,22 +136,21 @@
 | Prefix Sum | 2 |
 | Stack | 1 |
 | Bracket Sequences | 1 |
+| Recursion | 1 |
 | Divide and Conquer | 1 |
 | Dynamic Programming | 1 |
-| Quicksort | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 28 |
+| Java | 29 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-03 | 6 |
 | 2026-09-04 | 2 |
 | 2026-09-05 | 3 |
 | 2026-09-06 | 1 |
@@ -180,6 +180,7 @@
 | 2026-09-30 | 1 |
 | 2026-10-01 | 1 |
 | 2026-10-02 | 4 |
+| 2026-10-03 | 1 |
 
 ---
 
@@ -194,6 +195,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 02 Oct 2026, 22:26
+    Last update: 03 Oct 2026, 02:52
   </sub>
 </p>
