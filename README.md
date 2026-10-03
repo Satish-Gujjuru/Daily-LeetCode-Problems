@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **93** | **76** | **16** | **1** | **6 days** | **18 days** |
+| **94** | **77** | **16** | **1** | **6 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **93** |
-| 🟢 Easy | 76 / 968 |
+| 🧩 **Problems Solved** | **94** |
+| 🟢 Easy | 77 / 968 |
 | 🟡 Medium | 16 / 2,122 |
 | 🔴 Hard | 1 / 979 |
-| 🎯 Acceptance Rate | **75.9%** |
+| 🎯 Acceptance Rate | **76.0%** |
 | 🔥 Current Streak | **6 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **41** |
-| 📁 Problems in Repository | **31** |
+| 📁 Problems in Repository | **32** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 7.9% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.0% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.8% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
+| [861. Flipping an Image](./861-flipping-an-image) | 🟢 Easy | 2026-10-03 |
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
 | [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
 | [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
@@ -69,11 +70,10 @@
 | [66. Plus One](./66-plus-one) | 🟢 Easy | 2026-09-28 |
 | [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
 | [1833. Find the Highest Altitude](./1833-find-the-highest-altitude) | 🟢 Easy | 2026-09-28 |
-| [1950. Sign of the Product of an Array](./1950-sign-of-the-product-of-an-array) | 🟢 Easy | 2026-09-28 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (21)
+### 🟢 Easy (22)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -87,6 +87,7 @@
 | 387 | **First Unique Character in a String** | Hash Table, String, Queue, Counting | [Open](./387-first-unique-character-in-a-string) | 2026-09-28 |
 | 389 | **Find the Difference** | Hash Table, String, Bit Manipulation, Sorting | [Open](./389-find-the-difference) | 2026-09-30 |
 | 414 | **Third Maximum Number** | Array, Sorting | [Open](./414-third-maximum-number) | 2026-10-02 |
+| 861 | **Flipping an Image** | Array, Two Pointers, Bit Manipulation, Matrix | [Open](./861-flipping-an-image) | 2026-10-03 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 1833 | **Find the Highest Altitude** | Array, Prefix Sum | [Open](./1833-find-the-highest-altitude) | 2026-09-28 |
@@ -124,27 +125,27 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 20 |
+| Array | 21 |
 | String | 8 |
 | Math | 8 |
 | Hash Table | 8 |
+| Bit Manipulation | 7 |
 | Sorting | 6 |
-| Bit Manipulation | 6 |
 | Binary Search | 5 |
-| Two Pointers | 4 |
+| Two Pointers | 5 |
 | Counting | 3 |
+| Simulation | 2 |
 | Prefix Sum | 2 |
 | Stack | 1 |
 | Bracket Sequences | 1 |
 | Recursion | 1 |
 | Divide and Conquer | 1 |
-| Dynamic Programming | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 29 |
+| Java | 30 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -180,7 +181,7 @@
 | 2026-09-30 | 1 |
 | 2026-10-01 | 1 |
 | 2026-10-02 | 4 |
-| 2026-10-03 | 1 |
+| 2026-10-03 | 2 |
 
 ---
 
@@ -195,6 +196,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 03 Oct 2026, 02:52
+    Last update: 03 Oct 2026, 17:23
   </sub>
 </p>
