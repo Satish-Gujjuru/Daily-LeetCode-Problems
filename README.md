@@ -30,9 +30,9 @@
 | Metric | Value |
 |---|---:|
 | 🧩 **Problems Solved** | **95** |
-| 🟢 Easy | 78 / 968 |
-| 🟡 Medium | 16 / 2,122 |
-| 🔴 Hard | 1 / 979 |
+| 🟢 Easy | 78 / 969 |
+| 🟡 Medium | 16 / 2,124 |
+| 🔴 Hard | 1 / 980 |
 | 🎯 Acceptance Rate | **75.7%** |
 | 🔥 Current Streak | **6 days** |
 | 🏆 Longest Streak | **18 days** |
@@ -43,7 +43,7 @@
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.1% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.0% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.8% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
 
@@ -153,7 +153,6 @@
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-04 | 2 |
 | 2026-09-05 | 3 |
 | 2026-09-06 | 1 |
 | 2026-09-07 | 1 |
@@ -183,6 +182,7 @@
 | 2026-10-01 | 1 |
 | 2026-10-02 | 4 |
 | 2026-10-03 | 4 |
+| 2026-10-04 | 0 |
 
 ---
 
@@ -197,6 +197,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 03 Oct 2026, 21:37
+    Last update: 04 Oct 2026, 21:45
   </sub>
 </p>
