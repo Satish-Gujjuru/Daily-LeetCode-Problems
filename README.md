@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **96** | **79** | **16** | **1** | **2 days** | **18 days** |
+| **97** | **79** | **17** | **1** | **3 days** | **18 days** |
 
 ---
 
@@ -29,15 +29,15 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **96** |
+| 🧩 **Problems Solved** | **97** |
 | 🟢 Easy | 79 / 969 |
-| 🟡 Medium | 16 / 2,124 |
+| 🟡 Medium | 17 / 2,124 |
 | 🔴 Hard | 1 / 980 |
-| 🎯 Acceptance Rate | **76.0%** |
-| 🔥 Current Streak | **2 days** |
+| 🎯 Acceptance Rate | **76.2%** |
+| 🔥 Current Streak | **3 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **43** |
-| 📁 Problems in Repository | **33** |
+| 📅 Active Days | **44** |
+| 📁 Problems in Repository | **34** |
 
 ### Difficulty Progress
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
 | [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
 | [541. Reverse String II](./541-reverse-string-ii) | 🟢 Easy | 2026-10-03 |
 | [861. Flipping an Image](./861-flipping-an-image) | 🟢 Easy | 2026-10-03 |
@@ -69,7 +70,6 @@
 | [389. Find the Difference](./389-find-the-difference) | 🟢 Easy | 2026-09-30 |
 | [53. Maximum Subarray](./53-maximum-subarray) | 🟡 Medium | 2026-09-29 |
 | [66. Plus One](./66-plus-one) | 🟢 Easy | 2026-09-28 |
-| [387. First Unique Character in a String](./387-first-unique-character-in-a-string) | 🟢 Easy | 2026-09-28 |
 
 ## 🧩 Problems Solved
 
@@ -101,7 +101,7 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (9)
+### 🟡 Medium (10)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -113,6 +113,7 @@
 | 167 | **Two Sum II - Input Array Is Sorted** | Array, Two Pointers, Binary Search | [Open](./167-two-sum-ii-input-array-is-sorted) | 2026-09-22 |
 | 260 | **Single Number III** | Array, Bit Manipulation | [Open](./260-single-number-iii) | 2026-09-24 |
 | 882 | **Peak Index in a Mountain Array** | Array, Binary Search, Ternary Search | [Open](./882-peak-index-in-a-mountain-array) | 2026-09-25 |
+| 957 | **Minimum Add to Make Parentheses Valid** | String, Stack, Greedy, Bracket Sequences | [Open](./957-minimum-add-to-make-parentheses-valid) | 2026-10-07 |
 | 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
 
 ### 🔴 Hard (1)
@@ -127,7 +128,7 @@
 | Topic | Problems |
 |---|---:|
 | Array | 21 |
-| String | 9 |
+| String | 10 |
 | Math | 8 |
 | Hash Table | 8 |
 | Bit Manipulation | 7 |
@@ -135,10 +136,10 @@
 | Sorting | 6 |
 | Binary Search | 5 |
 | Counting | 3 |
+| Stack | 2 |
+| Bracket Sequences | 2 |
 | Simulation | 2 |
 | Prefix Sum | 2 |
-| Stack | 1 |
-| Bracket Sequences | 1 |
 | Recursion | 1 |
 | Divide and Conquer | 1 |
 
@@ -146,14 +147,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 31 |
+| Java | 32 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-07 | 1 |
 | 2026-09-08 | 2 |
 | 2026-09-09 | 1 |
 | 2026-09-10 | 0 |
@@ -183,6 +183,7 @@
 | 2026-10-04 | 0 |
 | 2026-10-05 | 1 |
 | 2026-10-06 | 1 |
+| 2026-10-07 | 1 |
 
 ---
 
@@ -197,6 +198,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 06 Oct 2026, 22:43
+    Last update: 07 Oct 2026, 10:27
   </sub>
 </p>
