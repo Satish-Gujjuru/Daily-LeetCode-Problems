@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **98** | **79** | **18** | **1** | **3 days** | **18 days** |
+| **99** | **79** | **18** | **2** | **4 days** | **18 days** |
 
 ---
 
@@ -29,14 +29,14 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **98** |
+| 🧩 **Problems Solved** | **99** |
 | 🟢 Easy | 79 / 969 |
 | 🟡 Medium | 18 / 2,124 |
-| 🔴 Hard | 1 / 980 |
-| 🎯 Acceptance Rate | **75.8%** |
-| 🔥 Current Streak | **3 days** |
+| 🔴 Hard | 2 / 980 |
+| 🎯 Acceptance Rate | **76.0%** |
+| 🔥 Current Streak | **4 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **44** |
+| 📅 Active Days | **45** |
 | 📁 Problems in Repository | **35** |
 
 ### Difficulty Progress
@@ -45,7 +45,7 @@
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.2% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.8% |
-| 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.1% |
+| 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
 
 
@@ -53,7 +53,7 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **687,720** | **77.95%** | **1** |
+| **1,413** | **688,386** | **77.93%** | **1** |
 
 
 ## 🕐 Recently Added
@@ -155,7 +155,6 @@
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-08 | 2 |
 | 2026-09-09 | 1 |
 | 2026-09-10 | 0 |
 | 2026-09-11 | 0 |
@@ -185,6 +184,7 @@
 | 2026-10-05 | 1 |
 | 2026-10-06 | 1 |
 | 2026-10-07 | 3 |
+| 2026-10-08 | 1 |
 
 ---
 
@@ -199,6 +199,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 07 Oct 2026, 23:14
+    Last update: 08 Oct 2026, 23:30
   </sub>
 </p>
