@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **100** | **79** | **19** | **2** | **7 days** | **18 days** |
+| **101** | **80** | **19** | **2** | **7 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **100** |
-| 🟢 Easy | 79 / 969 |
+| 🧩 **Problems Solved** | **101** |
+| 🟢 Easy | 80 / 969 |
 | 🟡 Medium | 19 / 2,124 |
 | 🔴 Hard | 2 / 980 |
-| 🎯 Acceptance Rate | **75.9%** |
+| 🎯 Acceptance Rate | **76.1%** |
 | 🔥 Current Streak | **7 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **48** |
-| 📁 Problems in Repository | **36** |
+| 📁 Problems in Repository | **37** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.2% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.3% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.9% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
+| [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
 | [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
 | [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
@@ -69,11 +70,10 @@
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
 | [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
 | [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
-| [389. Find the Difference](./389-find-the-difference) | 🟢 Easy | 2026-09-30 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (23)
+### 🟢 Easy (24)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -95,6 +95,7 @@
 | 1950 | **Sign of the Product of an Array** | Array, Math | [Open](./1950-sign-of-the-product-of-an-array) | 2026-09-28 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
+| 2844 | **Sum of Squares of Special Elements ** | Array, Enumeration | [Open](./2844-sum-of-squares-of-special-elements) | 2026-10-12 |
 | 3321 | **Type of Triangle** | Array, Math, Sorting, Polygons | [Open](./3321-type-of-triangle) | 2026-09-28 |
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
 | 3869 | **Smallest Index With Digit Sum Equal to Index** | Array, Math | [Open](./3869-smallest-index-with-digit-sum-equal-to-index) | 2026-09-24 |
@@ -129,7 +130,7 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 22 |
+| Array | 23 |
 | String | 10 |
 | Math | 9 |
 | Two Pointers | 8 |
@@ -149,7 +150,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 34 |
+| Java | 35 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -185,7 +186,7 @@
 | 2026-10-08 | 1 |
 | 2026-10-09 | 2 |
 | 2026-10-10 | 1 |
-| 2026-10-11 | 1 |
+| 2026-10-11 | 2 |
 
 ---
 
@@ -200,6 +201,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 11 Oct 2026, 18:30
+    Last update: 11 Oct 2026, 18:38
   </sub>
 </p>
