@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **99** | **79** | **18** | **2** | **6 days** | **18 days** |
+| **100** | **79** | **19** | **2** | **7 days** | **18 days** |
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **99** |
+| 🧩 **Problems Solved** | **100** |
 | 🟢 Easy | 79 / 969 |
-| 🟡 Medium | 18 / 2,124 |
+| 🟡 Medium | 19 / 2,124 |
 | 🔴 Hard | 2 / 980 |
-| 🎯 Acceptance Rate | **75.8%** |
-| 🔥 Current Streak | **6 days** |
+| 🎯 Acceptance Rate | **75.9%** |
+| 🔥 Current Streak | **7 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **47** |
-| 📁 Problems in Repository | **35** |
+| 📅 Active Days | **48** |
+| 📁 Problems in Repository | **36** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.2% |
-| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.8% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.9% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
 | [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
 | [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
@@ -69,7 +70,6 @@
 | [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
 | [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
 | [389. Find the Difference](./389-find-the-difference) | 🟢 Easy | 2026-09-30 |
-| [53. Maximum Subarray](./53-maximum-subarray) | 🟡 Medium | 2026-09-29 |
 
 ## 🧩 Problems Solved
 
@@ -101,10 +101,11 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (11)
+### 🟡 Medium (12)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
+| 11 | **Container With Most Water** | Array, Two Pointers, Greedy | [Open](./11-container-with-most-water) | 2026-10-12 |
 | 33 | **Search in Rotated Sorted Array** | Array, Binary Search | [Open](./33-search-in-rotated-sorted-array) | 2026-10-02 |
 | 50 | **Pow(x, n)** | Math, Recursion | [Open](./50-powx-n) | 2026-10-03 |
 | 53 | **Maximum Subarray** | Array, Divide and Conquer, Dynamic Programming | [Open](./53-maximum-subarray) | 2026-09-29 |
@@ -128,34 +129,33 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 21 |
+| Array | 22 |
 | String | 10 |
 | Math | 9 |
+| Two Pointers | 8 |
 | Hash Table | 8 |
-| Two Pointers | 7 |
 | Bit Manipulation | 7 |
 | Binary Search | 6 |
 | Sorting | 6 |
 | Counting | 3 |
+| Greedy | 2 |
 | Stack | 2 |
 | Bracket Sequences | 2 |
 | Simulation | 2 |
 | Prefix Sum | 2 |
 | Recursion | 1 |
-| Divide and Conquer | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 33 |
+| Java | 34 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-11 | 0 |
 | 2026-09-12 | 0 |
 | 2026-09-13 | 0 |
 | 2026-09-14 | 0 |
@@ -185,6 +185,7 @@
 | 2026-10-08 | 1 |
 | 2026-10-09 | 2 |
 | 2026-10-10 | 1 |
+| 2026-10-11 | 1 |
 
 ---
 
@@ -199,6 +200,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 10 Oct 2026, 21:55
+    Last update: 11 Oct 2026, 18:30
   </sub>
 </p>
