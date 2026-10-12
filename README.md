@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **101** | **80** | **19** | **2** | **7 days** | **18 days** |
+| **102** | **81** | **19** | **2** | **8 days** | **18 days** |
 
 ---
 
@@ -29,15 +29,15 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **101** |
-| 🟢 Easy | 80 / 969 |
-| 🟡 Medium | 19 / 2,124 |
-| 🔴 Hard | 2 / 980 |
-| 🎯 Acceptance Rate | **76.1%** |
-| 🔥 Current Streak | **7 days** |
+| 🧩 **Problems Solved** | **102** |
+| 🟢 Easy | 81 / 971 |
+| 🟡 Medium | 19 / 2,128 |
+| 🔴 Hard | 2 / 982 |
+| 🎯 Acceptance Rate | **76.2%** |
+| 🔥 Current Streak | **8 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **48** |
-| 📁 Problems in Repository | **37** |
+| 📅 Active Days | **49** |
+| 📁 Problems in Repository | **38** |
 
 ### Difficulty Progress
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
+| [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
 | [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
 | [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
@@ -69,11 +70,10 @@
 | [861. Flipping an Image](./861-flipping-an-image) | 🟢 Easy | 2026-10-03 |
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
 | [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
-| [414. Third Maximum Number](./414-third-maximum-number) | 🟢 Easy | 2026-10-02 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (24)
+### 🟢 Easy (25)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -91,6 +91,7 @@
 | 861 | **Flipping an Image** | Array, Two Pointers, Bit Manipulation, Matrix | [Open](./861-flipping-an-image) | 2026-10-03 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
+| 1482 | **How Many Numbers Are Smaller Than the Current Number** | Array, Hash Table, Sorting, Counting Sort | [Open](./1482-how-many-numbers-are-smaller-than-the-current-number) | 2026-10-12 |
 | 1833 | **Find the Highest Altitude** | Array, Prefix Sum | [Open](./1833-find-the-highest-altitude) | 2026-09-28 |
 | 1950 | **Sign of the Product of an Array** | Array, Math | [Open](./1950-sign-of-the-product-of-an-array) | 2026-09-28 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
@@ -130,14 +131,14 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 23 |
+| Array | 24 |
 | String | 10 |
 | Math | 9 |
+| Hash Table | 9 |
 | Two Pointers | 8 |
-| Hash Table | 8 |
+| Sorting | 7 |
 | Bit Manipulation | 7 |
 | Binary Search | 6 |
-| Sorting | 6 |
 | Counting | 3 |
 | Greedy | 2 |
 | Stack | 2 |
@@ -150,14 +151,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 35 |
+| Java | 36 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-12 | 0 |
 | 2026-09-13 | 0 |
 | 2026-09-14 | 0 |
 | 2026-09-15 | 3 |
@@ -187,6 +187,7 @@
 | 2026-10-09 | 2 |
 | 2026-10-10 | 1 |
 | 2026-10-11 | 2 |
+| 2026-10-12 | 1 |
 
 ---
 
@@ -201,6 +202,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 11 Oct 2026, 22:16
+    Last update: 12 Oct 2026, 08:04
   </sub>
 </p>
