@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **102** | **81** | **19** | **2** | **8 days** | **18 days** |
+| **103** | **82** | **19** | **2** | **8 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **102** |
-| 🟢 Easy | 81 / 971 |
+| 🧩 **Problems Solved** | **103** |
+| 🟢 Easy | 82 / 971 |
 | 🟡 Medium | 19 / 2,128 |
 | 🔴 Hard | 2 / 982 |
-| 🎯 Acceptance Rate | **76.2%** |
+| 🎯 Acceptance Rate | **76.4%** |
 | 🔥 Current Streak | **8 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **49** |
-| 📁 Problems in Repository | **38** |
+| 📁 Problems in Repository | **39** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.3% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.4% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.9% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
+| [485. Max Consecutive Ones](./485-max-consecutive-ones) | 🟢 Easy | 2026-10-12 |
 | [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
 | [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
@@ -69,11 +70,10 @@
 | [541. Reverse String II](./541-reverse-string-ii) | 🟢 Easy | 2026-10-03 |
 | [861. Flipping an Image](./861-flipping-an-image) | 🟢 Easy | 2026-10-03 |
 | [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
-| [33. Search in Rotated Sorted Array](./33-search-in-rotated-sorted-array) | 🟡 Medium | 2026-10-02 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (25)
+### 🟢 Easy (26)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -87,6 +87,7 @@
 | 387 | **First Unique Character in a String** | Hash Table, String, Queue, Counting | [Open](./387-first-unique-character-in-a-string) | 2026-09-28 |
 | 389 | **Find the Difference** | Hash Table, String, Bit Manipulation, Sorting | [Open](./389-find-the-difference) | 2026-09-30 |
 | 414 | **Third Maximum Number** | Array, Sorting | [Open](./414-third-maximum-number) | 2026-10-02 |
+| 485 | **Max Consecutive Ones** | Array | [Open](./485-max-consecutive-ones) | 2026-10-12 |
 | 541 | **Reverse String II** | Two Pointers, String | [Open](./541-reverse-string-ii) | 2026-10-03 |
 | 861 | **Flipping an Image** | Array, Two Pointers, Bit Manipulation, Matrix | [Open](./861-flipping-an-image) | 2026-10-03 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
@@ -131,7 +132,7 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 24 |
+| Array | 25 |
 | String | 10 |
 | Math | 9 |
 | Hash Table | 9 |
@@ -151,7 +152,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 36 |
+| Java | 37 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -187,7 +188,7 @@
 | 2026-10-09 | 2 |
 | 2026-10-10 | 1 |
 | 2026-10-11 | 2 |
-| 2026-10-12 | 1 |
+| 2026-10-12 | 2 |
 
 ---
 
@@ -202,6 +203,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 12 Oct 2026, 08:04
+    Last update: 12 Oct 2026, 11:24
   </sub>
 </p>
