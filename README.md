@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **103** | **82** | **19** | **2** | **8 days** | **18 days** |
+| **104** | **82** | **20** | **2** | **8 days** | **18 days** |
 
 ---
 
@@ -29,15 +29,15 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **103** |
+| 🧩 **Problems Solved** | **104** |
 | 🟢 Easy | 82 / 971 |
-| 🟡 Medium | 19 / 2,128 |
+| 🟡 Medium | 20 / 2,128 |
 | 🔴 Hard | 2 / 982 |
-| 🎯 Acceptance Rate | **76.4%** |
+| 🎯 Acceptance Rate | **76.5%** |
 | 🔥 Current Streak | **8 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **49** |
-| 📁 Problems in Repository | **39** |
+| 📁 Problems in Repository | **40** |
 
 ### Difficulty Progress
 
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
+| [15. 3Sum](./15-3sum) | 🟡 Medium | 2026-10-12 |
 | [485. Max Consecutive Ones](./485-max-consecutive-ones) | 🟢 Easy | 2026-10-12 |
 | [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
 | [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
@@ -69,7 +70,6 @@
 | [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
 | [541. Reverse String II](./541-reverse-string-ii) | 🟢 Easy | 2026-10-03 |
 | [861. Flipping an Image](./861-flipping-an-image) | 🟢 Easy | 2026-10-03 |
-| [20. Valid Parentheses](./20-valid-parentheses) | 🟢 Easy | 2026-10-02 |
 
 ## 🧩 Problems Solved
 
@@ -104,11 +104,12 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (12)
+### 🟡 Medium (13)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
 | 11 | **Container With Most Water** | Array, Two Pointers, Greedy | [Open](./11-container-with-most-water) | 2026-10-12 |
+| 15 | **3Sum** | Array, Two Pointers, Sorting | [Open](./15-3sum) | 2026-10-12 |
 | 33 | **Search in Rotated Sorted Array** | Array, Binary Search | [Open](./33-search-in-rotated-sorted-array) | 2026-10-02 |
 | 50 | **Pow(x, n)** | Math, Recursion | [Open](./50-powx-n) | 2026-10-03 |
 | 53 | **Maximum Subarray** | Array, Divide and Conquer, Dynamic Programming | [Open](./53-maximum-subarray) | 2026-09-29 |
@@ -132,12 +133,12 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 25 |
+| Array | 26 |
 | String | 10 |
+| Two Pointers | 9 |
 | Math | 9 |
 | Hash Table | 9 |
-| Two Pointers | 8 |
-| Sorting | 7 |
+| Sorting | 8 |
 | Bit Manipulation | 7 |
 | Binary Search | 6 |
 | Counting | 3 |
@@ -152,7 +153,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 37 |
+| Java | 38 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -188,7 +189,7 @@
 | 2026-10-09 | 2 |
 | 2026-10-10 | 1 |
 | 2026-10-11 | 2 |
-| 2026-10-12 | 2 |
+| 2026-10-12 | 3 |
 
 ---
 
@@ -203,6 +204,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 12 Oct 2026, 11:24
+    Last update: 12 Oct 2026, 11:50
   </sub>
 </p>
