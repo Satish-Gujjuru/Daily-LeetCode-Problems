@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **105** | **82** | **21** | **2** | **9 days** | **18 days** |
+| **107** | **82** | **23** | **2** | **10 days** | **18 days** |
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **105** |
+| 🧩 **Problems Solved** | **107** |
 | 🟢 Easy | 82 / 971 |
-| 🟡 Medium | 21 / 2,128 |
+| 🟡 Medium | 23 / 2,128 |
 | 🔴 Hard | 2 / 983 |
-| 🎯 Acceptance Rate | **76.7%** |
-| 🔥 Current Streak | **9 days** |
+| 🎯 Acceptance Rate | **76.5%** |
+| 🔥 Current Streak | **10 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **50** |
-| 📁 Problems in Repository | **41** |
+| 📅 Active Days | **51** |
+| 📁 Problems in Repository | **42** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.4% |
-| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.0% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [74. Search a 2D Matrix](./74-search-a-2d-matrix) | 🟡 Medium | 2026-10-15 |
 | [18. 4Sum](./18-4sum) | 🟡 Medium | 2026-10-13 |
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
 | [15. 3Sum](./15-3sum) | 🟡 Medium | 2026-10-12 |
@@ -69,7 +70,6 @@
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
 | [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
 | [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
-| [541. Reverse String II](./541-reverse-string-ii) | 🟢 Easy | 2026-10-03 |
 
 ## 🧩 Problems Solved
 
@@ -104,7 +104,7 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (14)
+### 🟡 Medium (15)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -114,6 +114,7 @@
 | 33 | **Search in Rotated Sorted Array** | Array, Binary Search | [Open](./33-search-in-rotated-sorted-array) | 2026-10-02 |
 | 50 | **Pow(x, n)** | Math, Recursion | [Open](./50-powx-n) | 2026-10-03 |
 | 53 | **Maximum Subarray** | Array, Divide and Conquer, Dynamic Programming | [Open](./53-maximum-subarray) | 2026-09-29 |
+| 74 | **Search a 2D Matrix** | Array, Binary Search, Matrix | [Open](./74-search-a-2d-matrix) | 2026-10-15 |
 | 75 | **Sort Colors** | Array, Two Pointers, Sorting, Quicksort | [Open](./75-sort-colors) | 2026-09-06 |
 | 137 | **Single Number II** | Array, Bit Manipulation | [Open](./137-single-number-ii) | 2026-09-24 |
 | 167 | **Two Sum II - Input Array Is Sorted** | Array, Two Pointers, Binary Search | [Open](./167-two-sum-ii-input-array-is-sorted) | 2026-09-22 |
@@ -134,34 +135,33 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 27 |
+| Array | 28 |
 | Two Pointers | 10 |
 | String | 10 |
 | Sorting | 9 |
 | Math | 9 |
 | Hash Table | 9 |
+| Binary Search | 7 |
 | Bit Manipulation | 7 |
-| Binary Search | 6 |
 | Counting | 3 |
 | Greedy | 2 |
 | Stack | 2 |
 | Bracket Sequences | 2 |
+| Matrix | 2 |
 | Simulation | 2 |
 | Prefix Sum | 2 |
-| Recursion | 1 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 39 |
+| Java | 40 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-14 | 0 |
 | 2026-09-15 | 3 |
 | 2026-09-16 | 0 |
 | 2026-09-17 | 0 |
@@ -191,6 +191,7 @@
 | 2026-10-11 | 2 |
 | 2026-10-12 | 3 |
 | 2026-10-13 | 1 |
+| 2026-10-14 | 3 |
 
 ---
 
@@ -205,6 +206,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 13 Oct 2026, 22:59
+    Last update: 14 Oct 2026, 18:53
   </sub>
 </p>
