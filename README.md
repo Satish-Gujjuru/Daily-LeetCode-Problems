@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **107** | **82** | **23** | **2** | **10 days** | **18 days** |
+| **108** | **83** | **23** | **2** | **11 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **107** |
-| 🟢 Easy | 82 / 971 |
+| 🧩 **Problems Solved** | **108** |
+| 🟢 Easy | 83 / 971 |
 | 🟡 Medium | 23 / 2,128 |
 | 🔴 Hard | 2 / 983 |
-| 🎯 Acceptance Rate | **76.5%** |
-| 🔥 Current Streak | **10 days** |
+| 🎯 Acceptance Rate | **76.6%** |
+| 🔥 Current Streak | **11 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **51** |
-| 📁 Problems in Repository | **42** |
+| 📅 Active Days | **52** |
+| 📁 Problems in Repository | **43** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.4% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.5% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -53,7 +53,7 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **688,386** | **77.93%** | **1** |
+| **1,413** | **689,196** | **77.89%** | **1** |
 
 
 ## 🕐 Recently Added
@@ -61,6 +61,7 @@
 | Problem | Difficulty | Date |
 |---|---|---|
 | [74. Search a 2D Matrix](./74-search-a-2d-matrix) | 🟡 Medium | 2026-10-15 |
+| [203. Remove Linked List Elements](./203-remove-linked-list-elements) | 🟢 Easy | 2026-10-15 |
 | [18. 4Sum](./18-4sum) | 🟡 Medium | 2026-10-13 |
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
 | [15. 3Sum](./15-3sum) | 🟡 Medium | 2026-10-12 |
@@ -69,11 +70,10 @@
 | [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
 | [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
-| [50. Pow(x, n)](./50-powx-n) | 🟡 Medium | 2026-10-03 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (26)
+### 🟢 Easy (27)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -81,6 +81,7 @@
 | 66 | **Plus One** | Array, Math | [Open](./66-plus-one) | 2026-09-28 |
 | 125 | **Valid Palindrome** | Two Pointers, String | [Open](./125-valid-palindrome) | 2026-09-22 |
 | 136 | **Single Number** | Array, Bit Manipulation | [Open](./136-single-number) | 2026-09-08 |
+| 203 | **Remove Linked List Elements** | Linked List, Recursion | [Open](./203-remove-linked-list-elements) | 2026-10-15 |
 | 205 | **Isomorphic Strings** | Hash Table, String | [Open](./205-isomorphic-strings) | 2026-09-24 |
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
@@ -147,22 +148,21 @@
 | Greedy | 2 |
 | Stack | 2 |
 | Bracket Sequences | 2 |
+| Recursion | 2 |
 | Matrix | 2 |
 | Simulation | 2 |
-| Prefix Sum | 2 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 40 |
+| Java | 41 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-15 | 3 |
 | 2026-09-16 | 0 |
 | 2026-09-17 | 0 |
 | 2026-09-18 | 0 |
@@ -192,6 +192,7 @@
 | 2026-10-12 | 3 |
 | 2026-10-13 | 1 |
 | 2026-10-14 | 3 |
+| 2026-10-15 | 1 |
 
 ---
 
@@ -206,6 +207,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 14 Oct 2026, 21:52
+    Last update: 15 Oct 2026, 10:38
   </sub>
 </p>
