@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **110** | **84** | **24** | **2** | **1 days** | **18 days** |
+| **111** | **85** | **24** | **2** | **2 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **110** |
-| 🟢 Easy | 84 / 972 |
+| 🧩 **Problems Solved** | **111** |
+| 🟢 Easy | 85 / 972 |
 | 🟡 Medium | 24 / 2,130 |
 | 🔴 Hard | 2 / 984 |
-| 🎯 Acceptance Rate | **76.9%** |
-| 🔥 Current Streak | **1 days** |
+| 🎯 Acceptance Rate | **77.1%** |
+| 🔥 Current Streak | **2 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **54** |
-| 📁 Problems in Repository | **43** |
+| 📅 Active Days | **55** |
+| 📁 Problems in Repository | **44** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.6% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.7% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [2210. Find Target Indices After Sorting Array](./2210-find-target-indices-after-sorting-array) | 🟢 Easy | 2026-10-19 |
 | [74. Search a 2D Matrix](./74-search-a-2d-matrix) | 🟡 Medium | 2026-10-15 |
 | [203. Remove Linked List Elements](./203-remove-linked-list-elements) | 🟢 Easy | 2026-10-15 |
 | [18. 4Sum](./18-4sum) | 🟡 Medium | 2026-10-13 |
@@ -69,11 +70,10 @@
 | [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
 | [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
 | [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
-| [957. Minimum Add to Make Parentheses Valid](./957-minimum-add-to-make-parentheses-valid) | 🟡 Medium | 2026-10-07 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (27)
+### 🟢 Easy (28)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -96,6 +96,7 @@
 | 1482 | **How Many Numbers Are Smaller Than the Current Number** | Array, Hash Table, Sorting, Counting Sort | [Open](./1482-how-many-numbers-are-smaller-than-the-current-number) | 2026-10-12 |
 | 1833 | **Find the Highest Altitude** | Array, Prefix Sum | [Open](./1833-find-the-highest-altitude) | 2026-09-28 |
 | 1950 | **Sign of the Product of an Array** | Array, Math | [Open](./1950-sign-of-the-product-of-an-array) | 2026-09-28 |
+| 2210 | **Find Target Indices After Sorting Array** | Array, Binary Search, Sorting | [Open](./2210-find-target-indices-after-sorting-array) | 2026-10-19 |
 | 2427 | **First Letter to Appear Twice** | Hash Table, String, Bit Manipulation, Counting | [Open](./2427-first-letter-to-appear-twice) | 2026-09-27 |
 | 2502 | **Sort the People** | Array, Hash Table, String, Sorting | [Open](./2502-sort-the-people) | 2026-09-19 |
 | 2844 | **Sum of Squares of Special Elements ** | Array, Enumeration | [Open](./2844-sum-of-squares-of-special-elements) | 2026-10-12 |
@@ -136,13 +137,13 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 28 |
+| Array | 29 |
 | Two Pointers | 10 |
+| Sorting | 10 |
 | String | 10 |
-| Sorting | 9 |
 | Math | 9 |
 | Hash Table | 9 |
-| Binary Search | 7 |
+| Binary Search | 8 |
 | Bit Manipulation | 7 |
 | Counting | 3 |
 | Greedy | 2 |
@@ -156,14 +157,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 41 |
+| Java | 42 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-19 | 2 |
 | 2026-09-20 | 1 |
 | 2026-09-21 | 0 |
 | 2026-09-22 | 4 |
@@ -193,6 +193,7 @@
 | 2026-10-16 | 1 |
 | 2026-10-17 | 0 |
 | 2026-10-18 | 1 |
+| 2026-10-19 | 1 |
 
 ---
 
@@ -207,6 +208,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 18 Oct 2026, 20:57
+    Last update: 19 Oct 2026, 16:30
   </sub>
 </p>
