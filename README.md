@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **112** | **86** | **24** | **2** | **4 days** | **18 days** |
+| **113** | **87** | **24** | **2** | **5 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **112** |
-| 🟢 Easy | 86 / 972 |
+| 🧩 **Problems Solved** | **113** |
+| 🟢 Easy | 87 / 972 |
 | 🟡 Medium | 24 / 2,131 |
 | 🔴 Hard | 2 / 984 |
-| 🎯 Acceptance Rate | **76.4%** |
-| 🔥 Current Streak | **4 days** |
+| 🎯 Acceptance Rate | **76.6%** |
+| 🔥 Current Streak | **5 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **57** |
-| 📁 Problems in Repository | **44** |
+| 📅 Active Days | **58** |
+| 📁 Problems in Repository | **45** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 8.8% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 9.0% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -53,13 +53,14 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **689,196** | **77.89%** | **1** |
+| **1,413** | **689,562** | **77.88%** | **1** |
 
 
 ## 🕐 Recently Added
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [234. Palindrome Linked List](./234-palindrome-linked-list) | 🟢 Easy | 2026-10-22 |
 | [2210. Find Target Indices After Sorting Array](./2210-find-target-indices-after-sorting-array) | 🟢 Easy | 2026-10-19 |
 | [74. Search a 2D Matrix](./74-search-a-2d-matrix) | 🟡 Medium | 2026-10-15 |
 | [203. Remove Linked List Elements](./203-remove-linked-list-elements) | 🟢 Easy | 2026-10-15 |
@@ -69,11 +70,10 @@
 | [485. Max Consecutive Ones](./485-max-consecutive-ones) | 🟢 Easy | 2026-10-12 |
 | [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
 | [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
-| [633. Sum of Square Numbers](./633-sum-of-square-numbers) | 🟡 Medium | 2026-10-07 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (28)
+### 🟢 Easy (29)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -84,6 +84,7 @@
 | 203 | **Remove Linked List Elements** | Linked List, Recursion | [Open](./203-remove-linked-list-elements) | 2026-10-15 |
 | 205 | **Isomorphic Strings** | Hash Table, String | [Open](./205-isomorphic-strings) | 2026-09-24 |
 | 219 | **Contains Duplicate II** | Array, Hash Table, Sliding Window | [Open](./219-contains-duplicate-ii) | 2026-09-15 |
+| 234 | **Palindrome Linked List** | Linked List, Two Pointers, Stack, Recursion | [Open](./234-palindrome-linked-list) | 2026-10-22 |
 | 350 | **Intersection of Two Arrays II** | Array, Hash Table, Two Pointers, Binary Search | [Open](./350-intersection-of-two-arrays-ii) | 2026-09-19 |
 | 387 | **First Unique Character in a String** | Hash Table, String, Queue, Counting | [Open](./387-first-unique-character-in-a-string) | 2026-09-28 |
 | 389 | **Find the Difference** | Hash Table, String, Bit Manipulation, Sorting | [Open](./389-find-the-difference) | 2026-09-30 |
@@ -138,33 +139,32 @@
 | Topic | Problems |
 |---|---:|
 | Array | 29 |
-| Two Pointers | 10 |
+| Two Pointers | 11 |
 | Sorting | 10 |
 | String | 10 |
 | Math | 9 |
 | Hash Table | 9 |
 | Binary Search | 8 |
 | Bit Manipulation | 7 |
+| Stack | 3 |
+| Recursion | 3 |
 | Counting | 3 |
 | Greedy | 2 |
-| Stack | 2 |
 | Bracket Sequences | 2 |
-| Recursion | 2 |
 | Matrix | 2 |
-| Simulation | 2 |
+| Linked List | 2 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 42 |
+| Java | 43 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-22 | 4 |
 | 2026-09-23 | 0 |
 | 2026-09-24 | 6 |
 | 2026-09-25 | 1 |
@@ -194,6 +194,7 @@
 | 2026-10-19 | 1 |
 | 2026-10-20 | 2 |
 | 2026-10-21 | 2 |
+| 2026-10-22 | 1 |
 
 ---
 
@@ -208,6 +209,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 21 Oct 2026, 21:53
+    Last update: 22 Oct 2026, 17:08
   </sub>
 </p>
