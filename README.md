@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **113** | **87** | **24** | **2** | **5 days** | **18 days** |
+| **114** | **88** | **24** | **2** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **113** |
-| 🟢 Easy | 87 / 972 |
+| 🧩 **Problems Solved** | **114** |
+| 🟢 Easy | 88 / 972 |
 | 🟡 Medium | 24 / 2,131 |
 | 🔴 Hard | 2 / 984 |
-| 🎯 Acceptance Rate | **76.6%** |
-| 🔥 Current Streak | **5 days** |
+| 🎯 Acceptance Rate | **76.7%** |
+| 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **58** |
-| 📁 Problems in Repository | **45** |
+| 📅 Active Days | **59** |
+| 📁 Problems in Repository | **46** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 9.0% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 9.1% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [908. Middle of the Linked List](./908-middle-of-the-linked-list) | 🟢 Easy | 2026-10-24 |
 | [234. Palindrome Linked List](./234-palindrome-linked-list) | 🟢 Easy | 2026-10-22 |
 | [2210. Find Target Indices After Sorting Array](./2210-find-target-indices-after-sorting-array) | 🟢 Easy | 2026-10-19 |
 | [74. Search a 2D Matrix](./74-search-a-2d-matrix) | 🟡 Medium | 2026-10-15 |
@@ -69,11 +70,10 @@
 | [15. 3Sum](./15-3sum) | 🟡 Medium | 2026-10-12 |
 | [485. Max Consecutive Ones](./485-max-consecutive-ones) | 🟢 Easy | 2026-10-12 |
 | [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
-| [2844. Sum of Squares of Special Elements ](./2844-sum-of-squares-of-special-elements) | 🟢 Easy | 2026-10-12 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (29)
+### 🟢 Easy (30)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -92,6 +92,7 @@
 | 485 | **Max Consecutive Ones** | Array | [Open](./485-max-consecutive-ones) | 2026-10-12 |
 | 541 | **Reverse String II** | Two Pointers, String | [Open](./541-reverse-string-ii) | 2026-10-03 |
 | 861 | **Flipping an Image** | Array, Two Pointers, Bit Manipulation, Matrix | [Open](./861-flipping-an-image) | 2026-10-03 |
+| 908 | **Middle of the Linked List** | Linked List, Two Pointers | [Open](./908-middle-of-the-linked-list) | 2026-10-24 |
 | 1406 | **Subtract the Product and Sum of Digits of an Integer** | Math | [Open](./1406-subtract-the-product-and-sum-of-digits-of-an-integer) | 2026-09-07 |
 | 1444 | **Number of Steps to Reduce a Number to Zero** | Math, Bit Manipulation | [Open](./1444-number-of-steps-to-reduce-a-number-to-zero) | 2026-09-27 |
 | 1482 | **How Many Numbers Are Smaller Than the Current Number** | Array, Hash Table, Sorting, Counting Sort | [Open](./1482-how-many-numbers-are-smaller-than-the-current-number) | 2026-10-12 |
@@ -139,7 +140,7 @@
 | Topic | Problems |
 |---|---:|
 | Array | 29 |
-| Two Pointers | 11 |
+| Two Pointers | 12 |
 | Sorting | 10 |
 | String | 10 |
 | Math | 9 |
@@ -148,24 +149,23 @@
 | Bit Manipulation | 7 |
 | Stack | 3 |
 | Recursion | 3 |
+| Linked List | 3 |
 | Counting | 3 |
 | Greedy | 2 |
 | Bracket Sequences | 2 |
 | Matrix | 2 |
-| Linked List | 2 |
 
 ## 💻 Languages Used
 
 | Language | Solutions |
 |---|---:|
-| Java | 43 |
+| Java | 44 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-24 | 6 |
 | 2026-09-25 | 1 |
 | 2026-09-26 | 2 |
 | 2026-09-27 | 0 |
@@ -195,6 +195,7 @@
 | 2026-10-21 | 2 |
 | 2026-10-22 | 1 |
 | 2026-10-23 | 0 |
+| 2026-10-24 | 1 |
 
 ---
 
@@ -209,6 +210,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 23 Oct 2026, 21:34
+    Last update: 24 Oct 2026, 08:21
   </sub>
 </p>
