@@ -30,9 +30,9 @@
 | Metric | Value |
 |---|---:|
 | 🧩 **Problems Solved** | **114** |
-| 🟢 Easy | 88 / 973 |
-| 🟡 Medium | 24 / 2,133 |
-| 🔴 Hard | 2 / 985 |
+| 🟢 Easy | 88 / 974 |
+| 🟡 Medium | 24 / 2,135 |
+| 🔴 Hard | 2 / 986 |
 | 🎯 Acceptance Rate | **76.7%** |
 | 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
@@ -166,7 +166,6 @@
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-25 | 1 |
 | 2026-09-26 | 2 |
 | 2026-09-27 | 0 |
 | 2026-09-28 | 8 |
@@ -196,6 +195,7 @@
 | 2026-10-22 | 1 |
 | 2026-10-23 | 0 |
 | 2026-10-24 | 1 |
+| 2026-10-25 | 0 |
 
 ---
 
@@ -210,6 +210,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 24 Oct 2026, 21:03
+    Last update: 25 Oct 2026, 21:04
   </sub>
 </p>
