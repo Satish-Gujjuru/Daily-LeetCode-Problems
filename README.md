@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **114** | **88** | **24** | **2** | **2 days** | **18 days** |
+| **114** | **88** | **24** | **2** | **0 days** | **18 days** |
 
 ---
 
@@ -31,10 +31,10 @@
 |---|---:|
 | 🧩 **Problems Solved** | **114** |
 | 🟢 Easy | 88 / 974 |
-| 🟡 Medium | 24 / 2,135 |
+| 🟡 Medium | 24 / 2,136 |
 | 🔴 Hard | 2 / 986 |
 | 🎯 Acceptance Rate | **76.8%** |
-| 🔥 Current Streak | **2 days** |
+| 🔥 Current Streak | **0 days** |
 | 🏆 Longest Streak | **18 days** |
 | 📅 Active Days | **60** |
 | 📁 Problems in Repository | **46** |
@@ -166,7 +166,6 @@
 
 | Date | Submissions |
 |---|---:|
-| 2026-09-27 | 0 |
 | 2026-09-28 | 8 |
 | 2026-09-29 | 2 |
 | 2026-09-30 | 1 |
@@ -196,6 +195,7 @@
 | 2026-10-24 | 1 |
 | 2026-10-25 | 1 |
 | 2026-10-26 | 0 |
+| 2026-10-27 | 0 |
 
 ---
 
@@ -210,6 +210,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 26 Oct 2026, 22:49
+    Last update: 27 Oct 2026, 22:28
   </sub>
 </p>
