@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **115** | **89** | **24** | **2** | **0 days** | **18 days** |
+| **116** | **90** | **24** | **2** | **1 days** | **18 days** |
 
 ---
 
@@ -29,21 +29,21 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **115** |
-| 🟢 Easy | 89 / 975 |
+| 🧩 **Problems Solved** | **116** |
+| 🟢 Easy | 90 / 975 |
 | 🟡 Medium | 24 / 2,138 |
 | 🔴 Hard | 2 / 987 |
-| 🎯 Acceptance Rate | **77.0%** |
-| 🔥 Current Streak | **0 days** |
+| 🎯 Acceptance Rate | **77.1%** |
+| 🔥 Current Streak | **1 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **61** |
-| 📁 Problems in Repository | **46** |
+| 📅 Active Days | **62** |
+| 📁 Problems in Repository | **47** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
-| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 9.1% |
+| 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 9.2% |
 | 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [4116. Minimum Moves to Equal Array Elements III](./4116-minimum-moves-to-equal-array-elements-iii) | 🟢 Easy | 2026-11-03 |
 | [908. Middle of the Linked List](./908-middle-of-the-linked-list) | 🟢 Easy | 2026-10-24 |
 | [234. Palindrome Linked List](./234-palindrome-linked-list) | 🟢 Easy | 2026-10-22 |
 | [2210. Find Target Indices After Sorting Array](./2210-find-target-indices-after-sorting-array) | 🟢 Easy | 2026-10-19 |
@@ -69,11 +70,10 @@
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
 | [15. 3Sum](./15-3sum) | 🟡 Medium | 2026-10-12 |
 | [485. Max Consecutive Ones](./485-max-consecutive-ones) | 🟢 Easy | 2026-10-12 |
-| [1482. How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number) | 🟢 Easy | 2026-10-12 |
 
 ## 🧩 Problems Solved
 
-### 🟢 Easy (30)
+### 🟢 Easy (31)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -105,6 +105,7 @@
 | 3321 | **Type of Triangle** | Array, Math, Sorting, Polygons | [Open](./3321-type-of-triangle) | 2026-09-28 |
 | 3811 | **Reverse Degree of a String** | String, Simulation | [Open](./3811-reverse-degree-of-a-string) | 2026-09-20 |
 | 3869 | **Smallest Index With Digit Sum Equal to Index** | Array, Math | [Open](./3869-smallest-index-with-digit-sum-equal-to-index) | 2026-09-24 |
+| 4116 | **Minimum Moves to Equal Array Elements III** | Array, Math | [Open](./4116-minimum-moves-to-equal-array-elements-iii) | 2026-11-03 |
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
@@ -139,11 +140,11 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 29 |
+| Array | 30 |
 | Two Pointers | 12 |
 | Sorting | 10 |
 | String | 10 |
-| Math | 9 |
+| Math | 10 |
 | Hash Table | 9 |
 | Binary Search | 8 |
 | Bit Manipulation | 7 |
@@ -159,7 +160,7 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 44 |
+| Java | 45 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
@@ -195,7 +196,7 @@
 | 2026-10-31 | 0 |
 | 2026-11-01 | 0 |
 | 2026-11-02 | 0 |
-| 2026-11-03 | 0 |
+| 2026-11-03 | 1 |
 
 ---
 
@@ -210,6 +211,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 03 Nov 2026, 01:08
+    Last update: 03 Nov 2026, 06:01
   </sub>
 </p>
