@@ -20,7 +20,7 @@
 
 | 🧩 Solved | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🔥 Streak | 🏆 Best Streak |
 |---:|---:|---:|---:|---:|---:|
-| **116** | **90** | **24** | **2** | **1 days** | **18 days** |
+| **117** | **90** | **25** | **2** | **2 days** | **18 days** |
 
 ---
 
@@ -29,22 +29,22 @@
 
 | Metric | Value |
 |---|---:|
-| 🧩 **Problems Solved** | **116** |
+| 🧩 **Problems Solved** | **117** |
 | 🟢 Easy | 90 / 975 |
-| 🟡 Medium | 24 / 2,139 |
+| 🟡 Medium | 25 / 2,139 |
 | 🔴 Hard | 2 / 987 |
-| 🎯 Acceptance Rate | **77.1%** |
-| 🔥 Current Streak | **1 days** |
+| 🎯 Acceptance Rate | **77.2%** |
+| 🔥 Current Streak | **2 days** |
 | 🏆 Longest Streak | **18 days** |
-| 📅 Active Days | **62** |
-| 📁 Problems in Repository | **47** |
+| 📅 Active Days | **63** |
+| 📁 Problems in Repository | **48** |
 
 ### Difficulty Progress
 
 | Difficulty | Progress | Completion |
 |---|---|---:|
 | 🟢 Easy | `██░░░░░░░░░░░░░░░░░░░░░░` | 9.2% |
-| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.1% |
+| 🟡 Medium | `░░░░░░░░░░░░░░░░░░░░░░░░` | 1.2% |
 | 🔴 Hard | `░░░░░░░░░░░░░░░░░░░░░░░░` | 0.2% |
 
 
@@ -60,6 +60,7 @@
 
 | Problem | Difficulty | Date |
 |---|---|---|
+| [1604. Least Number of Unique Integers after K Removals](./1604-least-number-of-unique-integers-after-k-removals) | 🟡 Medium | 2026-11-04 |
 | [4116. Minimum Moves to Equal Array Elements III](./4116-minimum-moves-to-equal-array-elements-iii) | 🟢 Easy | 2026-11-03 |
 | [908. Middle of the Linked List](./908-middle-of-the-linked-list) | 🟢 Easy | 2026-10-24 |
 | [234. Palindrome Linked List](./234-palindrome-linked-list) | 🟢 Easy | 2026-10-22 |
@@ -69,7 +70,6 @@
 | [18. 4Sum](./18-4sum) | 🟡 Medium | 2026-10-13 |
 | [11. Container With Most Water](./11-container-with-most-water) | 🟡 Medium | 2026-10-12 |
 | [15. 3Sum](./15-3sum) | 🟡 Medium | 2026-10-12 |
-| [485. Max Consecutive Ones](./485-max-consecutive-ones) | 🟢 Easy | 2026-10-12 |
 
 ## 🧩 Problems Solved
 
@@ -109,7 +109,7 @@
 | 4245 | **Count Commas in Range** | Math | [Open](./4245-count-commas-in-range) | 2026-09-08 |
 | 4410 | **Count Integers Appearing in a Single Block** | Array, Hash Table, Counting | [Open](./4410-count-integers-appearing-in-a-single-block) | 2026-09-24 |
 
-### 🟡 Medium (15)
+### 🟡 Medium (16)
 
 | # | Problem | Topics | Solution | Date |
 |---:|---|---|---|---|
@@ -127,6 +127,7 @@
 | 633 | **Sum of Square Numbers** | Math, Two Pointers, Binary Search | [Open](./633-sum-of-square-numbers) | 2026-10-07 |
 | 882 | **Peak Index in a Mountain Array** | Array, Binary Search, Ternary Search | [Open](./882-peak-index-in-a-mountain-array) | 2026-09-25 |
 | 957 | **Minimum Add to Make Parentheses Valid** | String, Stack, Greedy, Bracket Sequences | [Open](./957-minimum-add-to-make-parentheses-valid) | 2026-10-07 |
+| 1604 | **Least Number of Unique Integers after K Removals** | Array, Hash Table, Greedy, Sorting | [Open](./1604-least-number-of-unique-integers-after-k-removals) | 2026-11-04 |
 | 4285 | **Smallest Stable Index II** | Array, Prefix Sum | [Open](./4285-smallest-stable-index-ii) | 2026-09-06 |
 
 ### 🔴 Hard (1)
@@ -140,19 +141,19 @@
 
 | Topic | Problems |
 |---|---:|
-| Array | 30 |
+| Array | 31 |
 | Two Pointers | 12 |
-| Sorting | 10 |
+| Sorting | 11 |
 | String | 10 |
 | Math | 10 |
-| Hash Table | 9 |
+| Hash Table | 10 |
 | Binary Search | 8 |
 | Bit Manipulation | 7 |
+| Counting | 4 |
+| Greedy | 3 |
 | Stack | 3 |
 | Recursion | 3 |
 | Linked List | 3 |
-| Counting | 3 |
-| Greedy | 2 |
 | Bracket Sequences | 2 |
 | Matrix | 2 |
 
@@ -160,14 +161,13 @@
 
 | Language | Solutions |
 |---|---:|
-| Java | 45 |
+| Java | 46 |
 | Python | 1 |
 
 ## 📅 Last 30 Days
 
 | Date | Submissions |
 |---|---:|
-| 2026-10-05 | 1 |
 | 2026-10-06 | 1 |
 | 2026-10-07 | 3 |
 | 2026-10-08 | 1 |
@@ -197,6 +197,7 @@
 | 2026-11-01 | 0 |
 | 2026-11-02 | 0 |
 | 2026-11-03 | 1 |
+| 2026-11-04 | 1 |
 
 ---
 
@@ -211,6 +212,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 03 Nov 2026, 23:33
+    Last update: 04 Nov 2026, 03:01
   </sub>
 </p>
