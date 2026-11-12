@@ -53,7 +53,7 @@
 
 | Rating | Global Rank | Top Percentage | Contests |
 |---:|---:|---:|---:|
-| **1,413** | **690,877** | **77.83%** | **1** |
+| **1,413** | **691,445** | **77.80%** | **1** |
 
 
 ## 🕐 Recently Added
@@ -212,6 +212,6 @@
   <sub>
     🤖 Automatically updated by GitHub Actions
     <br>
-    Last update: 12 Nov 2026, 00:55
+    Last update: 12 Nov 2026, 23:45
   </sub>
 </p>
